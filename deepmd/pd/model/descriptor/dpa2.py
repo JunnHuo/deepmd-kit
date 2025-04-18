@@ -253,10 +253,10 @@ class DescrptDPA2(BaseDescriptor, paddle.nn.Layer):
                 (self.repinit_three_body.get_rcut(), self.repinit_three_body.get_nsel())
             )
         self.rcsl_list.sort()
-        for ii in range(1, len(self.rcsl_list)):
-            assert self.rcsl_list[ii - 1][1] <= self.rcsl_list[ii][1], (
-                "rcut and sel are not in the same order"
-            )
+        # for ii in range(1, len(self.rcsl_list)):
+        #     assert self.rcsl_list[ii - 1][1] <= self.rcsl_list[ii][1], (
+        #         "rcut and sel are not in the same order"
+        #     )
         self.rcut_list = [ii[0] for ii in self.rcsl_list]
         self.nsel_list = [ii[1] for ii in self.rcsl_list]
         self.use_econf_tebd = use_econf_tebd

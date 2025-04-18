@@ -1,0 +1,575 @@
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+[2025-04-16 12:07:28,632] [ WARNING] env.py:91 - To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, DP_INTRA_OP_PARALLELISM_THREADS, and DP_INTER_OP_PARALLELISM_THREADS. See https://deepmd.rtfd.io/parallelism/ for more information.
+[2025-04-16 12:07:28,980] DEEPMD INFO    DeePMD version: 3.1.0a1.dev3+g5f740f98
+[2025-04-16 12:07:28,981] DEEPMD INFO    Configuration path: input_torch_medium.json
+[2025-04-16 12:07:28,981] DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+[2025-04-16 12:07:28,981] DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+[2025-04-16 12:07:28,981] DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+[2025-04-16 12:07:28,981] DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+[2025-04-16 12:07:28,981] DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+[2025-04-16 12:07:28,981] DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+[2025-04-16 12:07:28,981] DEEPMD INFO    Please read and cite:
+[2025-04-16 12:07:28,981] DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+[2025-04-16 12:07:28,981] DEEPMD INFO    Zeng et al, J. Chem. Phys., 159, 054801 (2023)
+[2025-04-16 12:07:28,981] DEEPMD INFO    Zeng et al, arxiv:2502.19161
+[2025-04-16 12:07:28,981] DEEPMD INFO    See https://deepmd.rtfd.io/credits/ for details.
+[2025-04-16 12:07:28,981] DEEPMD INFO    ---------------------------------------------------------------------------------------------------------------
+[2025-04-16 12:07:28,981] DEEPMD INFO    installed to:          /home/huojun/deepmd-kit/deepmd
+[2025-04-16 12:07:28,981] DEEPMD INFO                           /home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/deepmd
+[2025-04-16 12:07:28,981] DEEPMD INFO    source:                v3.1.0a0-3-g5f740f98
+[2025-04-16 12:07:28,981] DEEPMD INFO    source branch:         devel
+[2025-04-16 12:07:28,981] DEEPMD INFO    source commit:         5f740f98
+[2025-04-16 12:07:28,981] DEEPMD INFO    source commit at:      2025-04-01 11:20:35 +0000
+[2025-04-16 12:07:28,981] DEEPMD INFO    use float prec:        double
+[2025-04-16 12:07:28,981] DEEPMD INFO    build variant:         cpu
+[2025-04-16 12:07:28,981] DEEPMD INFO    Backend:               Paddle
+[2025-04-16 12:07:28,981] DEEPMD INFO    PD ver:                v3.0.0-g6ed5dd3833c
+[2025-04-16 12:07:28,981] DEEPMD INFO    Enable custom OP:      False
+[2025-04-16 12:07:28,981] DEEPMD INFO    running on:            yq01-sys-hic-k8s-v100-qm-a223-0007.yq01.baidu.com
+[2025-04-16 12:07:28,982] DEEPMD INFO    computing device:      gpu:0
+[2025-04-16 12:07:28,982] DEEPMD INFO    CUDA_VISIBLE_DEVICES:  1
+[2025-04-16 12:07:28,982] DEEPMD INFO    Count of visible GPUs: 1
+[2025-04-16 12:07:28,982] DEEPMD INFO    num_intra_threads:     0
+[2025-04-16 12:07:28,982] DEEPMD INFO    num_inter_threads:     0
+[2025-04-16 12:07:28,982] DEEPMD INFO    ---------------------------------------------------------------------------------------------------------------
+[2025-04-16 12:07:29,155] DEEPMD INFO    Calculate neighbor statistics... (add --skip-neighbor-stat to skip this step)
+W0416 12:08:03.120154 28563 gpu_resources.cc:119] Please NOTE: device: 0, GPU Compute Capability: 7.0, Driver API Version: 12.0, Runtime API Version: 11.8
+W0416 12:08:03.127877 28563 gpu_resources.cc:164] device: 0, cuDNN Version: 8.9.
+[2025-04-16 12:08:05,253] DEEPMD INFO    Adjust batch size from 1024 to 2048
+[2025-04-16 12:08:05,270] DEEPMD INFO    Adjust batch size from 2048 to 4096
+[2025-04-16 12:08:05,288] DEEPMD INFO    Adjust batch size from 4096 to 8192
+[2025-04-16 12:08:05,313] DEEPMD INFO    Adjust batch size from 8192 to 16384
+[2025-04-16 12:08:05,527] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 0.885439
+[2025-04-16 12:08:05,528] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [108] (cutoff radius: 6.000000)
+[2025-04-16 12:08:05,536] DEEPMD INFO    Adjust batch size from 1024 to 2048
+[2025-04-16 12:08:05,546] DEEPMD INFO    Adjust batch size from 2048 to 4096
+[2025-04-16 12:08:05,557] DEEPMD INFO    Adjust batch size from 4096 to 8192
+[2025-04-16 12:08:05,575] DEEPMD INFO    Adjust batch size from 8192 to 16384
+[2025-04-16 12:08:05,677] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 0.885439
+[2025-04-16 12:08:05,677] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [39] (cutoff radius: 4.000000)
+[2025-04-16 12:08:05,690] DEEPMD INFO    Adjust batch size from 1024 to 2048
+[2025-04-16 12:08:05,697] DEEPMD INFO    Adjust batch size from 2048 to 4096
+[2025-04-16 12:08:05,708] DEEPMD INFO    Adjust batch size from 4096 to 8192
+[2025-04-16 12:08:05,726] DEEPMD INFO    Adjust batch size from 8192 to 16384
+[2025-04-16 12:08:05,833] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 0.885439
+[2025-04-16 12:08:05,833] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [39] (cutoff radius: 4.000000)
+[2025-04-16 12:08:05,988] DEEPMD INFO    Enable prim in eager and static mode.
+[2025-04-16 12:08:06,500] DEEPMD INFO    Packing data for statistics from 3 systems
+[2025-04-16 12:08:07,420] DEEPMD INFO    Save stats to ./dpa2.hdf5#/H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og/5131d19909483e7c8fd3735cbdf30bada1591980.
+[2025-04-16 12:08:08,008] DEEPMD INFO    Save stats to ./dpa2.hdf5#/H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og/ebdf92d8cc34154b423917545982c2cb63af9ebe.
+[2025-04-16 12:08:08,062] DEEPMD INFO    Load stats from ./dpa2.hdf5#/H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og/ebdf92d8cc34154b423917545982c2cb63af9ebe.
+[2025-04-16 12:08:08,092] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.0037659011986923533 in the unit of energy.
+[2025-04-16 12:08:08,159] DEEPMD INFO    ---Summary of DataSystem: training     -----------------------------------------------
+[2025-04-16 12:08:08,159] DEEPMD INFO    found 3 system(s):
+[2025-04-16 12:08:08,160] DEEPMD INFO                                        system  natoms  bch_sz   n_bch       prob  pbc
+[2025-04-16 12:08:08,160] DEEPMD INFO                                ../data/data_0     192       1      80  2.500e-01    T
+[2025-04-16 12:08:08,160] DEEPMD INFO                                ../data/data_1     192       1     160  5.000e-01    T
+[2025-04-16 12:08:08,160] DEEPMD INFO                                ../data/data_2     192       1      80  2.500e-01    T
+[2025-04-16 12:08:08,160] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2025-04-16 12:08:08,164] DEEPMD INFO    ---Summary of DataSystem: validation   -----------------------------------------------
+[2025-04-16 12:08:08,164] DEEPMD INFO    found 1 system(s):
+[2025-04-16 12:08:08,164] DEEPMD INFO                                        system  natoms  bch_sz   n_bch       prob  pbc
+[2025-04-16 12:08:08,164] DEEPMD INFO                                ../data/data_3     192       1      80  1.000e+00    T
+[2025-04-16 12:08:08,164] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2025-04-16 12:08:08,168] DEEPMD INFO    Enable CINN during training, there may be some additional compilation time in the first traning step.
+[2025-04-16 12:08:08,168] DEEPMD INFO    Start to train 1000000 steps.
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `coord0`, please ensure do not use `coord0`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `coord1`, please ensure do not use `coord1`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `index`, please ensure do not use `index`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `m_real_nei`, please ensure do not use `m_real_nei`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `nlist_mapping`, please ensure do not use `nlist_mapping`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `rr`, please ensure do not use `rr`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `pad`, please ensure do not use `pad`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+W0416 12:08:17.550904 28563 pd_api.cc:32214] got different data type, run type promotion automatically, this may cause data type been changed.
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+W0416 12:08:18.204334 28563 pd_api.cc:33881] got different data type, run type promotion automatically, this may cause data type been changed.
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/base/dygraph/base.py:90: UserWarning: paddle.grad has unsupported parameter in jit: retain_graph, jit will discard it
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/base/dygraph/base.py:90: UserWarning: paddle.grad has unsupported parameter in jit: create_grad, jit will discard it
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+[2025-04-16 12:08:31,790] [ WARNING] backward_utils.py:695 - input provided by inputs has no use
+W0416 12:08:55.158725 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:08:55.158792 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:08:55.163933 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:08:55.164453 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:08:55.164935 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:08:55.168223 28563 shape_optimization_pass.cc:292] pd_op.einsum DOES NOT have InferSymbolicShapeInterface!
+W0416 12:08:55.168243 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.einsum[id:7738], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.einsum
+  attrs: {"sd,fdk->fsk", 
+  input_shape_or_datas: {shape[Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1))), 3], data[NULL], shape[1, 3, 3], data[NULL]}
+W0416 12:08:55.168258 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[7738], with results index 0
+W0416 12:08:55.168296 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[7738], with results index 2
+W0416 12:08:55.210732 28563 shape_optimization_pass.cc:354] cached shape is not consistent with real shape
+W0416 12:08:55.226181 28563 shape_optimization_pass.cc:354] cached shape is not consistent with real shape
+W0416 12:08:55.242066 28563 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0416 12:08:55.242164 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:8136]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.242221 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.unsqueeze [id:8138]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.242270 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.expand [id:8140]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0416 12:08:55.243387 28563 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0416 12:08:55.243539 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:8150]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.243546 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:8150]  carefully! shape[3] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.315217 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.subtract [id:8153]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.315346 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.p_norm [id:8154]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.315519 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8158]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.315781 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8165]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.315908 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8166]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316028 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8167]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316102 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8168]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316229 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8169]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316288 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8170]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316581 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:8177]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316659 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:8179]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316733 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:8181]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316897 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8187]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.316949 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8188]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317108 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8189]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317279 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8191]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317418 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8192]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317492 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8193]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317623 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8194]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317688 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8195]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317773 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:8196]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.317907 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:8199]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318027 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:8202]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318117 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:8204]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318192 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:8206]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318279 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8208]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318390 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8212]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318441 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8213]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318594 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8214]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318665 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8215]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318790 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8216]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318897 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8217]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.318984 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8218]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.319140 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8219]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.319213 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8220]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.319303 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:8221]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.319443 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:8224]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.319736 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:8227]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.319924 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:8229]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.320113 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:8231]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.320211 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8233]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.320443 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8237]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.320595 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8238]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.320746 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8239]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.320827 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8240]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.320966 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8241]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.321094 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8242]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.321183 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8243]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.321336 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8244]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.321413 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8245]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.321513 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:8246]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.329607 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_equal [id:8294]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.329998 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8298]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.330133 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:8302]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.330212 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8303]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.330452 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8304]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.330531 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8305]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.330607 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8306]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.331126 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8307]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.331205 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8308]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.331697 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:8309]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.331763 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:8310]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:08:55.331845 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:8311]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0416 12:08:58.256765 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:14236], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), 1, 9], data[NULL], shape[1, Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), 1, 9], data[NULL], shape[4], data[1, Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), 1, 9]}
+W0416 12:08:58.256866 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[14236], with results index 0
+W0416 12:08:58.279572 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:14289], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), 1, 3], data[NULL], shape[1, Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), 1, 3], data[NULL], shape[4], data[1, Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), 1, 3]}
+W0416 12:08:58.279664 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[14289], with results index 0
+W0416 12:08:58.735929 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:15488], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 48, 1], data[NULL], shape[Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 48, 3], data[NULL], shape[4], data[Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 48, 3]}
+W0416 12:08:58.736047 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[15488], with results index 0
+W0416 12:08:58.864077 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:15927], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 1, 1, 8], data[NULL], shape[Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 48, 8], data[NULL], shape[4], data[Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 48, 8]}
+W0416 12:08:58.864140 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[15927], with results index 0
+W0416 12:08:58.895201 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:16010], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 1], data[NULL], shape[1, Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 32], data[NULL], shape[4], data[1, Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 32]}
+W0416 12:08:58.895264 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[16010], with results index 0
+W0416 12:08:58.965579 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:16211], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 1, 128], data[NULL], shape[1, Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 128], data[NULL], shape[4], data[1, Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 48, 128]}
+W0416 12:08:58.965648 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[16211], with results index 0
+W0416 12:08:59.937983 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.slice_grad[id:18672], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.slice_grad
+  attrs: {[1], [], [-1], 
+  input_shape_or_datas: {shape[1, Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), 8], data[NULL], shape[1, Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0), Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), Broadcast(S15, S21, Max(Min(Mul(Add(S5, 1, -Mul(S4, -1)), Add(S7, 1, -Mul(S6, -1)), Add(S9, 1, -Mul(S8, -1)), S0), S15), 0))), 0)), 8], data[NULL], shape[1], data[0], shape[1], data[S15]}
+W0416 12:08:59.938064 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.slice_grad[18672], with results index 0
+W0416 12:09:01.112027 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:01.295804 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:01.302706 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:01.309372 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:01.318163 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:02.067322 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:02.067391 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:02.074784 28563 shape_optimization_pass.cc:292] pd_op.einsum DOES NOT have InferSymbolicShapeInterface!
+W0416 12:09:02.074826 28563 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.einsum[id:32510], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.einsum
+  attrs: {"sd,fdk->fsk", 
+  input_shape_or_datas: {shape[Mul(Add(S4, 1, -Mul(S4, -1)), Add(S5, 1, -Mul(S5, -1)), Add(S6, 1, -Mul(S6, -1))), 3], data[NULL], shape[1, 3, 3], data[NULL]}
+W0416 12:09:02.074841 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[32510], with results index 0
+W0416 12:09:02.074867 28563 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[32510], with results index 2
+W0416 12:09:02.100831 28563 shape_optimization_pass.cc:354] cached shape is not consistent with real shape
+W0416 12:09:02.109364 28563 shape_optimization_pass.cc:354] cached shape is not consistent with real shape
+W0416 12:09:02.116189 28563 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0416 12:09:02.116328 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:32977]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.116384 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.unsqueeze [id:32979]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.116451 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.expand [id:32981]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0416 12:09:02.117297 28563 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0416 12:09:02.117465 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:33000]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.117482 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:33000]  carefully! shape[3] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.178727 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.subtract [id:33003]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.178865 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.p_norm [id:33004]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179059 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:33010]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179132 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:33012]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179195 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:33014]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179286 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:33019]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179348 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33020]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179550 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33021]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179725 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33023]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179874 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33024]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.179957 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33025]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180111 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33026]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180224 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33027]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180339 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:33028]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180482 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:33031]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180585 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:33034]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180680 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:33036]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180742 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:33038]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180815 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:33040]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180877 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:33043]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.180934 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33044]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.181113 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33045]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.181217 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33046]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.181376 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33047]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.181761 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33048]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.181859 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33049]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182003 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33050]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182087 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33051]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182188 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:33052]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182297 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:33055]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182559 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:33058]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182736 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:33060]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182894 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:33062]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.182968 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:33064]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.183178 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:33067]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.183353 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33068]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.183534 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33069]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.183629 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33070]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.183784 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33071]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.183931 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33072]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.184033 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33073]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.184203 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33074]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.184296 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33075]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.184412 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:33076]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.188800 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_equal [id:33132]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.189162 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:33136]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.189265 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_like [id:33139]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.189337 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33140]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.189595 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33141]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.189680 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33142]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.189764 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33143]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.190255 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33144]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.190336 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33145]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.190819 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:33146]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.190889 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:33147]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0416 12:09:02.190974 28563 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:33148]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0416 12:09:05.651176 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:06.470196 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:06.511727 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:06.528872 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:06.553398 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.553489 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.553556 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.553582 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.553642 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.553666 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.560809 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.560937 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.643787 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.646106 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.646145 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.646168 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.646195 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.646217 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.647384 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.647434 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.702831 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.702934 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.702965 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.702986 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.703012 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.703034 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.703212 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.703248 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.711663 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.711741 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.711768 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.711789 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.711815 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.711836 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.711995 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.712028 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.718524 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.718569 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.718604 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.718616 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.718633 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.718647 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.718796 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.718844 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.723078 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.723143 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.723170 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.723191 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.723218 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.723239 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.723392 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.723424 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.727227 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.727286 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.727312 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.727336 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.727361 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.727382 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.727530 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.727555 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.731213 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.731276 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.731302 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.731323 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.731348 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.731369 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.731513 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.731545 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.735234 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.735299 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.735325 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.735347 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.735373 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.735394 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.735546 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.735586 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.739281 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.739343 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.739370 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.739392 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.739418 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.739439 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:06.739586 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.739619 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:06.742347 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:06.802543 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+I0416 12:09:12.236181 28563 build_cinn_pass.cc:68] Time of building group ops (size=4877): 0 min 5 s 431 ms
+I0416 12:09:12.310370 28563 build_cinn_pass.cc:68] Time of building group ops (size=3): 0 min 0 s 0 ms
+I0416 12:09:12.311081 28563 build_cinn_pass.cc:68] Time of building group ops (size=10): 0 min 0 s 0 ms
+I0416 12:09:12.323199 28563 build_cinn_pass.cc:68] Time of building group ops (size=6): 0 min 0 s 0 ms
+I0416 12:09:12.323406 28563 build_cinn_pass.cc:68] Time of building group ops (size=1): 0 min 0 s 0 ms
+I0416 12:09:12.342832 28563 build_cinn_pass.cc:68] Time of building group ops (size=39): 0 min 0 s 18 ms
+I0416 12:09:12.343326 28563 build_cinn_pass.cc:68] Time of building group ops (size=1): 0 min 0 s 0 ms
+I0416 12:09:12.346262 28563 build_cinn_pass.cc:68] Time of building group ops (size=7): 0 min 0 s 0 ms
+I0416 12:09:12.346444 28563 build_cinn_pass.cc:68] Time of building group ops (size=1): 0 min 0 s 0 ms
+W0416 12:09:19.558949 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:19.560102 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:19.562491 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:19.563623 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:120] The output_shape has no data.
+W0416 12:09:19.577035 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:19.593971 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594069 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594095 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594117 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594139 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594161 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594182 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594201 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594223 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594244 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594264 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594285 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594306 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594338 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594359 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594379 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594400 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594420 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594441 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594462 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.594475 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:19.596939 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597007 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597030 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597059 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597080 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597101 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597122 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597144 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597165 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597186 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597208 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597227 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597249 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597270 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597290 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597311 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597332 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597353 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597374 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597396 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.597409 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:19.599848 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.599906 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.599929 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.599951 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.599972 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.599992 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600013 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600034 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600075 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600096 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600117 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600137 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600158 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600179 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600199 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600220 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600240 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600261 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600281 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600302 28563 fuse_shape_ops_into_generate_shape_op_pass.cc:446] Create GenerateShapeOp Failed.
+W0416 12:09:19.600315 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0416 12:09:19.689249 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.691736 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.706822 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.714581 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.716825 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.721714 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.723554 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.742595 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:19.756891 28563 shape_optimization_pass.cc:361] cached shape is not consistent with real shape
+W0416 12:09:20.347826 28563 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+Traceback (most recent call last):
+  File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/bin/dp", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/huojun/deepmd-kit/deepmd/main.py", line 928, in main
+    deepmd_main(args)
+  File "/home/huojun/deepmd-kit/deepmd/pd/entrypoints/main.py", line 543, in main
+    train(
+  File "/home/huojun/deepmd-kit/deepmd/pd/entrypoints/main.py", line 338, in train
+    trainer.run()
+  File "/home/huojun/deepmd-kit/deepmd/pd/train/training.py", line 963, in run
+    step(step_id, model_key)
+  File "/home/huojun/deepmd-kit/deepmd/pd/train/training.py", line 741, in step
+    model_pred, loss, more_loss = self.wrapper(
+                                  ^^^^^^^^^^^^^
+  File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/nn/layer/layers.py", line 1567, in __call__
+    return self.forward(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/program_translator.py", line 549, in __call__
+    return self._perform_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/program_translator.py", line 876, in _perform_call
+    error_data.raise_new_exception()
+  File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/error.py", line 454, in raise_new_exception
+    raise new_exception from None
+RuntimeError: In transformed code:
+
+
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/pir_partial_program.py", line 725, in __call__
+	attrs = self._prepare_attributes(in_sot_mode=False)
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/pir_partial_program.py", line 1131, in _prepare_attributes
+	self.program.forward_program,
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/pir_partial_program.py", line 948, in program
+	return self.train_program
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/functools.py", line 1001, in __get__
+	val = self.func(instance)
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/pir_partial_program.py", line 964, in train_program
+	return self._create_program()
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/decorator.py", line 235, in fun
+	return caller(func, *(extras + args), **kw)
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/base/wrapped_decorator.py", line 40, in __impl__
+	return wrapped_func(*args, **kwargs)
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/base/dygraph/base.py", line 101, in __impl__
+	return func(*args, **kwargs)
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/pir_partial_program.py", line 930, in _create_program
+	train_program.apply_pir_program_pass(pass_fn)
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/pir_partial_program.py", line 356, in apply_pir_program_pass
+	self.forward_program, self.backward_program = pass_fn(
+    File "/home/huojun/software/miniconda3/envs/Deepmd_pd_11.8/lib/python3.11/site-packages/paddle/jit/dy2static/pir_partial_program.py", line 919, in pass_fn
+	paddle.base.libpaddle.pir.apply_cinn_pass(forward_program)
+
+    RuntimeError: (PreconditionNotMet) Operator [shape64] is not registered
+  [Hint: op should not be null.] (at ../paddle/cinn/hlir/framework/op.h:140)
+
+

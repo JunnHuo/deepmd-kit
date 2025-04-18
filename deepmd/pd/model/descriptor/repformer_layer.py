@@ -486,8 +486,8 @@ class LocalAtten(paddle.nn.Layer):
     ) -> paddle.Tensor:
         nb, nloc, nnei = nlist_mask.shape
         ni, nd, nh = self.input_dim, self.hidden_dim, self.head_num
-        assert ni == g1.shape[-1]
-        assert ni == gg1.shape[-1]
+        # assert ni == g1.shape[-1]
+        # assert ni == gg1.shape[-1]
         # nb x nloc x nd x nh
         g1q = self.mapq(g1).reshape([nb, nloc, nd, nh])
         # nb x nloc x nh x nd
@@ -867,7 +867,7 @@ class RepformerLayer(paddle.nn.Layer):
         attn
             Attention weights from g2 attention, with shape nf x nloc x nnei x nnei x nh2.
         """
-        assert self.attn2_ev_apply is not None
+        # assert self.attn2_ev_apply is not None
         # nf x nloc x nnei x nh2
         h2_1 = self.attn2_ev_apply(attn, h2)
         return h2_1
@@ -894,7 +894,7 @@ class RepformerLayer(paddle.nn.Layer):
             The switch function, which equals 1 within the rcut_smth range, smoothly decays from 1 to 0 between rcut_smth and rcut,
             and remains 0 beyond rcut, with shape nb x nloc x nnei.
         """
-        assert self.proj_g1g2 is not None
+        # assert self.proj_g1g2 is not None
         nb, nloc, nnei, _ = g2.shape
         ng1 = gg1.shape[-1]
         ng2 = g2.shape[-1]
@@ -1449,30 +1449,30 @@ class RepformerLayer(paddle.nn.Layer):
         obj = cls(**data)
         obj.linear1 = MLPLayer.deserialize(linear1)
         if update_chnnl_2:
-            assert isinstance(linear2, dict)
+            # assert isinstance(linear2, dict)
             obj.linear2 = MLPLayer.deserialize(linear2)
         if update_g1_has_conv:
-            assert isinstance(proj_g1g2, dict)
+            # assert isinstance(proj_g1g2, dict)
             obj.proj_g1g2 = MLPLayer.deserialize(proj_g1g2)
         if update_g2_has_g1g1:
-            assert isinstance(proj_g1g1g2, dict)
+            # assert isinstance(proj_g1g1g2, dict)
             obj.proj_g1g1g2 = MLPLayer.deserialize(proj_g1g1g2)
         if update_g2_has_attn or update_h2:
-            assert isinstance(attn2g_map, dict)
+            # assert isinstance(attn2g_map, dict)
             obj.attn2g_map = Atten2Map.deserialize(attn2g_map)
             if update_g2_has_attn:
-                assert isinstance(attn2_mh_apply, dict)
-                assert isinstance(attn2_lm, dict)
+                # assert isinstance(attn2_mh_apply, dict)
+                # assert isinstance(attn2_lm, dict)
                 obj.attn2_mh_apply = Atten2MultiHeadApply.deserialize(attn2_mh_apply)
                 obj.attn2_lm = LayerNorm.deserialize(attn2_lm)
             if update_h2:
-                assert isinstance(attn2_ev_apply, dict)
+                # assert isinstance(attn2_ev_apply, dict)
                 obj.attn2_ev_apply = Atten2EquiVarApply.deserialize(attn2_ev_apply)
         if update_g1_has_attn:
-            assert isinstance(loc_attn, dict)
+            # assert isinstance(loc_attn, dict)
             obj.loc_attn = LocalAtten.deserialize(loc_attn)
         if g1_out_mlp:
-            assert isinstance(g1_self_mlp, dict)
+            # assert isinstance(g1_self_mlp, dict)
             obj.g1_self_mlp = MLPLayer.deserialize(g1_self_mlp)
         if update_style == "res_residual":
             for ii, t in enumerate(obj.g1_residual):

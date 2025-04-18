@@ -636,10 +636,34 @@ class Trainer:
         if CINN:
             from paddle import (
                 jit,
+                static,
             )
 
             backend = "CINN" if CINN else None
-            self.wrapper.forward = jit.to_static(full_graph=True, backend=backend)(
+            self.wrapper.forward = jit.to_static(
+                full_graph=True,
+                backend=backend,
+                input_spec=[
+                    static.InputSpec([1, -1, 3], "float64", name="coord"),
+                    static.InputSpec([1, -1], "int32", name="atype"),
+                    None,
+                    static.InputSpec([1, 9], "float64", name="box"),
+                    static.InputSpec([], "float64", name="cur_lr"),
+                    {
+                        "find_box": np.float32(1.0),
+                        "find_coord": np.float32(1.0),
+                        "find_numpy_copy": np.float32(0.0),
+                        "numpy_copy": static.InputSpec([1, 1], "int64", name="numpy_copy"),
+                        "find_energy": np.float32(1.0),
+                        "energy": static.InputSpec([1, 1], "float64", name="energy"),
+                        "find_force": np.float32(1.0),
+                        "force": static.InputSpec([1, -1, 3], "float64", name="force"),
+                        "natoms": static.InputSpec([1, -1], "int32", name="natoms"),
+                    },
+                    # None,
+                    # None,
+                ],
+            )(
                 self.wrapper.forward
             )
             log.info(
@@ -691,6 +715,18 @@ class Trainer:
                 input_dict, label_dict, log_dict = self.get_data(
                     is_train=True, task_key=task_key
                 )
+                # for k, v in input_dict.items():
+                #     if paddle.is_tensor(v):
+                #         print('input Tensor:', k, v.shape, v.dtype)
+                #     else:
+                #         print('input no-Tensor:', k, type(v))
+                # for k, v in label_dict.items():
+                #     if paddle.is_tensor(v):
+                #         print('label Tensor:', k, v.shape, v.dtype)
+                #     elif isinstance(v, np.ndarray):
+                #         print('label ndarray:', k, v.shape, v.dtype)
+                #     else:
+                #         print('label no-Tensor:', v, k, type(v))
             if SAMPLER_RECORD:
                 print_str = f"Step {_step_id}: sample system{log_dict['sid']}  frame{log_dict['fid']}\n"
                 fout1.write(print_str)
@@ -708,6 +744,8 @@ class Trainer:
                         label=label_dict,
                         task_key=task_key,
                     )
+                #     print(task_key)
+                # exit()
 
                 with nvprof_context(enable_profiling, "Backward pass"):
                     loss.backward()
