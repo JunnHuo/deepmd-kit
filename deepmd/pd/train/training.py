@@ -652,8 +652,8 @@ class Trainer:
                     {
                         "find_box": np.float32(1.0),
                         "find_coord": np.float32(1.0),
-                        "find_numpy_copy": np.float32(0.0),
-                        "numpy_copy": static.InputSpec([1, 1], "int64", name="numpy_copy"),
+                        "find_numb_copy": np.float32(0.0),
+                        "numb_copy": static.InputSpec([1, 1], "int64", name="numb_copy"),
                         "find_energy": np.float32(1.0),
                         "energy": static.InputSpec([1, 1], "float64", name="energy"),
                         "find_force": np.float32(1.0),

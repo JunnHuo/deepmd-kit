@@ -1,0 +1,957 @@
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+[2025-04-18 07:38:08,796] [ WARNING] env.py:91 - To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, DP_INTRA_OP_PARALLELISM_THREADS, and DP_INTER_OP_PARALLELISM_THREADS. See https://deepmd.rtfd.io/parallelism/ for more information.
+[2025-04-18 07:38:08,854] DEEPMD INFO    DeePMD version: 3.1.0a1.dev8+g71aedba5.d20250418
+[2025-04-18 07:38:08,854] DEEPMD INFO    Configuration path: single_task_input.json
+[2025-04-18 07:38:08,854] DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+[2025-04-18 07:38:08,854] DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+[2025-04-18 07:38:08,854] DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+[2025-04-18 07:38:08,854] DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+[2025-04-18 07:38:08,854] DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+[2025-04-18 07:38:08,854] DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+[2025-04-18 07:38:08,854] DEEPMD INFO    Please read and cite:
+[2025-04-18 07:38:08,854] DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+[2025-04-18 07:38:08,854] DEEPMD INFO    Zeng et al, J. Chem. Phys., 159, 054801 (2023)
+[2025-04-18 07:38:08,854] DEEPMD INFO    Zeng et al, arxiv:2502.19161
+[2025-04-18 07:38:08,855] DEEPMD INFO    See https://deepmd.rtfd.io/credits/ for details.
+[2025-04-18 07:38:08,855] DEEPMD INFO    ------------------------------------------------------------------------------------------------------------------
+[2025-04-18 07:38:08,855] DEEPMD INFO    installed to:          /home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/deepmd
+[2025-04-18 07:38:08,855] DEEPMD INFO                           /home/huojun/deepmd-kit/deepmd
+[2025-04-18 07:38:08,855] DEEPMD INFO    source:                v3.1.0a0-8-g71aedba5-dirty
+[2025-04-18 07:38:08,855] DEEPMD INFO    source branch:         devel
+[2025-04-18 07:38:08,855] DEEPMD INFO    source commit:         71aedba5
+[2025-04-18 07:38:08,855] DEEPMD INFO    source commit at:      2025-04-10 06:49:00 +0000
+[2025-04-18 07:38:08,855] DEEPMD INFO    use float prec:        double
+[2025-04-18 07:38:08,855] DEEPMD INFO    build variant:         cpu
+[2025-04-18 07:38:08,855] DEEPMD INFO    Backend:               Paddle
+[2025-04-18 07:38:08,855] DEEPMD INFO    PD ver:                v3.0.0-g6d1a7c06693
+[2025-04-18 07:38:08,855] DEEPMD INFO    Enable custom OP:      False
+[2025-04-18 07:38:08,855] DEEPMD INFO    running on:            yq01-sys-hic-k8s-v100-qm-a223-0007.yq01.baidu.com
+[2025-04-18 07:38:08,855] DEEPMD INFO    computing device:      gpu:0
+[2025-04-18 07:38:08,855] DEEPMD INFO    CUDA_VISIBLE_DEVICES:  7
+[2025-04-18 07:38:08,855] DEEPMD INFO    Count of visible GPUs: 1
+[2025-04-18 07:38:08,855] DEEPMD INFO    num_intra_threads:     0
+[2025-04-18 07:38:08,855] DEEPMD INFO    num_inter_threads:     0
+[2025-04-18 07:38:08,855] DEEPMD INFO    ------------------------------------------------------------------------------------------------------------------
+[2025-04-18 07:38:08,987] DEEPMD INFO    Calculate neighbor statistics... (add --skip-neighbor-stat to skip this step)
+W0418 07:38:12.084856 31800 gpu_resources.cc:119] Please NOTE: device: 0, GPU Compute Capability: 7.0, Driver API Version: 12.0, Runtime API Version: 11.8
+W0418 07:38:12.086407 31800 gpu_resources.cc:164] device: 0, cuDNN Version: 8.9.
+[2025-04-18 07:38:12,696] DEEPMD INFO    Adjust batch size from 1024 to 2048
+[2025-04-18 07:38:12,710] DEEPMD INFO    Adjust batch size from 2048 to 4096
+[2025-04-18 07:38:12,732] DEEPMD INFO    Adjust batch size from 4096 to 8192
+[2025-04-18 07:38:12,772] DEEPMD INFO    Adjust batch size from 8192 to 16384
+[2025-04-18 07:38:13,402] DEEPMD INFO    Adjust batch size from 16384 to 32768
+[2025-04-18 07:38:24,025] DEEPMD INFO    Adjust batch size from 32768 to 16384
+[2025-04-18 07:38:24,379] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 0.810833
+[2025-04-18 07:38:24,380] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [957] (cutoff radius: 9.000000)
+[2025-04-18 07:38:24,380] DEEPMD WARNING sel of type 0 is not enough! The expected value is not less than 957, but you set it to 120. The accuracy of your model may get worse.
+[2025-04-18 07:38:24,387] DEEPMD INFO    Adjust batch size from 1024 to 2048
+[2025-04-18 07:38:24,393] DEEPMD INFO    Adjust batch size from 2048 to 4096
+[2025-04-18 07:38:24,400] DEEPMD INFO    Adjust batch size from 4096 to 8192
+[2025-04-18 07:38:24,411] DEEPMD INFO    Adjust batch size from 8192 to 16384
+[2025-04-18 07:38:24,493] DEEPMD INFO    Adjust batch size from 16384 to 32768
+[2025-04-18 07:38:34,840] DEEPMD INFO    Adjust batch size from 32768 to 16384
+[2025-04-18 07:38:35,187] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 0.810833
+[2025-04-18 07:38:35,187] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [86] (cutoff radius: 4.000000)
+[2025-04-18 07:38:35,187] DEEPMD WARNING sel of type 0 is not enough! The expected value is not less than 86, but you set it to 48. The accuracy of your model may get worse.
+[2025-04-18 07:38:35,205] DEEPMD INFO    Adjust batch size from 1024 to 2048
+[2025-04-18 07:38:35,210] DEEPMD INFO    Adjust batch size from 2048 to 4096
+[2025-04-18 07:38:35,217] DEEPMD INFO    Adjust batch size from 4096 to 8192
+[2025-04-18 07:38:35,228] DEEPMD INFO    Adjust batch size from 8192 to 16384
+[2025-04-18 07:38:35,311] DEEPMD INFO    Adjust batch size from 16384 to 32768
+[2025-04-18 07:38:45,649] DEEPMD INFO    Adjust batch size from 32768 to 16384
+[2025-04-18 07:38:45,998] DEEPMD INFO    Neighbor statistics: training data with minimal neighbor distance: 0.810833
+[2025-04-18 07:38:45,998] DEEPMD INFO    Neighbor statistics: training data with maximum neighbor size: [86] (cutoff radius: 4.000000)
+[2025-04-18 07:38:45,998] DEEPMD WARNING sel of type 0 is not enough! The expected value is not less than 86, but you set it to 40. The accuracy of your model may get worse.
+[2025-04-18 07:38:46,032] DEEPMD INFO    Enable prim in eager and static mode.
+[2025-04-18 07:38:46,477] DEEPMD INFO    Packing data for statistics from 3 systems
+[2025-04-18 07:38:47,070] DEEPMD INFO    Save stats to ./dpa2.hdf5#/H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og/710a77dba52118287cf3c667272371e4b3918539.
+[2025-04-18 07:38:47,384] DEEPMD INFO    Save stats to ./dpa2.hdf5#/H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og/f3eec36d225a575de699efdd3703ce44ef533470.
+[2025-04-18 07:38:47,702] DEEPMD INFO    Save stats to ./dpa2.hdf5#/H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og/ebdf92d8cc34154b423917545982c2cb63af9ebe.
+[2025-04-18 07:38:47,708] DEEPMD INFO    RMSE of energy per atom after linear regression is: 0.10688319322296155 in the unit of energy.
+[2025-04-18 07:38:48,274] DEEPMD INFO    ---Summary of DataSystem: training     -----------------------------------------------
+[2025-04-18 07:38:48,274] DEEPMD INFO    found 3 system(s):
+[2025-04-18 07:38:48,275] DEEPMD INFO                                        system  natoms  bch_sz   n_bch       prob  pbc
+[2025-04-18 07:38:48,275] DEEPMD INFO    -- utorial_case1/data/H2O-PD_train/train_0      96       1     285  4.412e-01    T
+[2025-04-18 07:38:48,275] DEEPMD INFO    -- utorial_case1/data/H2O-PD_train/train_1     384       1     285  4.412e-01    T
+[2025-04-18 07:38:48,275] DEEPMD INFO    -- utorial_case1/data/H2O-PD_train/train_2      48       1      76  1.176e-01    T
+[2025-04-18 07:38:48,276] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2025-04-18 07:38:48,292] DEEPMD INFO    ---Summary of DataSystem: validation   -----------------------------------------------
+[2025-04-18 07:38:48,292] DEEPMD INFO    found 3 system(s):
+[2025-04-18 07:38:48,292] DEEPMD INFO                                        system  natoms  bch_sz   n_bch       prob  pbc
+[2025-04-18 07:38:48,292] DEEPMD INFO    -- utorial_case1/data/H2O-PD_valid/valid_0      96       1      15  4.412e-01    T
+[2025-04-18 07:38:48,292] DEEPMD INFO    -- utorial_case1/data/H2O-PD_valid/valid_1     384       1      15  4.412e-01    T
+[2025-04-18 07:38:48,292] DEEPMD INFO    -- utorial_case1/data/H2O-PD_valid/valid_2      48       1       4  1.176e-01    T
+[2025-04-18 07:38:48,292] DEEPMD INFO    --------------------------------------------------------------------------------------
+[2025-04-18 07:38:48,296] DEEPMD INFO    Enable CINN during training, there may be some additional compilation time in the first traning step.
+[2025-04-18 07:38:48,296] DEEPMD INFO    Start to train 10000 steps.
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `coord0`, please ensure do not use `coord0`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `coord1`, please ensure do not use `coord1`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `index`, please ensure do not use `index`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `m_real_nei`, please ensure do not use `m_real_nei`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `nlist_mapping`, please ensure do not use `nlist_mapping`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `rr`, please ensure do not use `rr`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `pad`, please ensure do not use `pad`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+W0418 07:38:56.583999 31800 pd_api.cc:31983] got different data type, run type promotion automatically, this may cause data type been changed.
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+W0418 07:38:57.037014 31800 pd_api.cc:33650] got different data type, run type promotion automatically, this may cause data type been changed.
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/base/dygraph/base.py:90: UserWarning: paddle.grad has unsupported parameter in jit: retain_graph, jit will discard it
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/base/dygraph/base.py:90: UserWarning: paddle.grad has unsupported parameter in jit: create_grad, jit will discard it
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+[2025-04-18 07:39:36,369] [ WARNING] backward_utils.py:695 - input provided by inputs has no use
+W0418 07:41:37.752010 31800 shape_optimization_pass.cc:292] pd_op.einsum DOES NOT have InferSymbolicShapeInterface!
+W0418 07:41:37.752060 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.einsum[id:12882], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.einsum
+  attrs: {"sd,fdk->fsk", 
+  input_shape_or_datas: {shape[Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1)), 3], data[NULL], shape[1, 3, 3], data[NULL]}
+W0418 07:41:37.752074 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[12882], with results index 0
+W0418 07:41:37.752094 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[12882], with results index 2
+W0418 07:41:37.773604 31800 shape_optimization_pass.cc:365] cached shape is not consistent with real shape for pd_op.if[id:13077]
+W0418 07:41:37.781829 31800 shape_optimization_pass.cc:365] cached shape is not consistent with real shape for pd_op.if[id:13094]
+W0418 07:41:37.785841 31800 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0418 07:41:37.785917 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:13280]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.785966 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.unsqueeze [id:13282]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.786006 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.expand [id:13284]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0418 07:41:37.786535 31800 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0418 07:41:37.786625 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:13294]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.786633 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:13294]  carefully! shape[3] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.826855 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.subtract [id:13297]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.826982 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.multiply [id:93354]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827100 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.sum [id:93356]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827150 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.sqrt [id:93357]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827312 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78936]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827514 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13309]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827625 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13310]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827713 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13311]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827764 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13312]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827853 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13313]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.827898 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13314]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828145 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:13321]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828214 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:13323]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828276 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:13325]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828483 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78947]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828527 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13332]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828637 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13333]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828763 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13335]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828876 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13336]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.828938 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13337]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.829056 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13338]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.829113 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13339]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.829187 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:13340]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.830430 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:13343]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.830562 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:13346]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.830636 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:13348]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.830698 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:13350]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.830857 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78950]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.830999 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78954]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831065 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13357]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831180 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13358]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831245 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13359]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831359 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13360]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831459 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13361]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831537 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13362]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831660 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13363]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831727 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13364]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831815 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:13365]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.831949 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:13368]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832062 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:13371]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832132 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:13373]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832194 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:13375]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832356 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78957]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832505 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78961]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832553 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13382]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832667 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13383]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832742 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13384]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832861 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13385]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.832985 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13386]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.833079 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13387]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.833215 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13388]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.833288 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13389]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.833379 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:13390]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.837075 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_equal [id:13438]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.837361 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78975]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.837662 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:78979]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.837721 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13447]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.837903 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13448]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.837975 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13449]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.838052 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13450]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.838416 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13451]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.838485 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13452]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.838846 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:13453]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.838907 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:13454]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:37.838979 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:13455]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0418 07:41:40.128724 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:80359], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 9], data[NULL], shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 9], data[NULL], shape[4], data[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 9]}
+W0418 07:41:40.128767 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[80359], with results index 0
+W0418 07:41:40.132725 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:80415], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 3], data[NULL], shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 3], data[NULL], shape[4], data[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 3]}
+W0418 07:41:40.132755 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[80415], with results index 0
+W0418 07:41:40.267886 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:81174], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 1], data[NULL], shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 3], data[NULL], shape[4], data[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 3]}
+W0418 07:41:40.267936 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[81174], with results index 0
+W0418 07:41:40.458743 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:81996], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 1, 1, 8], data[NULL], shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 8], data[NULL], shape[4], data[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 8]}
+W0418 07:41:40.458793 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[81996], with results index 0
+W0418 07:41:40.538571 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:82329], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 1], data[NULL], shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 32], data[NULL], shape[4], data[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 32]}
+W0418 07:41:40.538632 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[82329], with results index 0
+W0418 07:41:40.638715 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:82758], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 1, 128], data[NULL], shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 128], data[NULL], shape[4], data[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 128]}
+W0418 07:41:40.638765 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[82758], with results index 0
+W0418 07:41:41.798532 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.slice_grad[id:88138], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.slice_grad
+  attrs: {[1], [], [-1], 
+  input_shape_or_datas: {shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 8], data[NULL], shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 8], data[NULL], shape[1], data[0], shape[1], data[S16]}
+W0418 07:41:41.798586 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.slice_grad[88138], with results index 0
+W0418 07:41:42.927459 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:43.097332 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:43.106868 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:43.116552 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:43.126157 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+I0418 07:41:44.361840 31800 add_cinn_pass.cc:275] Compiling subgraph with CINN backend ...
+W0418 07:41:44.381358 31800 shape_optimization_pass.cc:292] pd_op.einsum DOES NOT have InferSymbolicShapeInterface!
+W0418 07:41:44.381390 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.einsum[id:113005], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.einsum
+  attrs: {"sd,fdk->fsk", 
+  input_shape_or_datas: {shape[Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1)), 3], data[NULL], shape[1, 3, 3], data[NULL]}
+W0418 07:41:44.381403 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[113005], with results index 0
+W0418 07:41:44.381423 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[113005], with results index 2
+W0418 07:41:44.399593 31800 shape_optimization_pass.cc:365] cached shape is not consistent with real shape for pd_op.if[id:113256]
+W0418 07:41:44.407707 31800 shape_optimization_pass.cc:365] cached shape is not consistent with real shape for pd_op.if[id:113280]
+W0418 07:41:44.411273 31800 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0418 07:41:44.411346 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:113489]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.411396 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.unsqueeze [id:113491]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.411437 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.expand [id:113493]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0418 07:41:44.411931 31800 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0418 07:41:44.412019 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:113512]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.412024 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:113512]  carefully! shape[3] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.450523 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.subtract [id:113515]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.450626 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.multiply [id:113516]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.450737 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.sum [id:113518]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.450788 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.sqrt [id:113519]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.450977 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:113525]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451063 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:113527]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451130 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:113529]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451311 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:113536]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451359 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113537]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451468 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113538]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451604 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113540]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451715 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113541]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451776 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113542]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451896 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113543]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.451951 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113544]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452031 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:113545]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452167 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:113548]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452270 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:113551]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452334 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:113553]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452395 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:113555]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452515 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:113558]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452630 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:113562]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452674 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113563]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452785 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113564]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452845 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113565]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.452952 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113566]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453054 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113567]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453138 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113568]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453254 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113569]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453315 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113570]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453397 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:113571]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453574 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:113574]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453676 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:113577]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453744 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:113579]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453810 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:113581]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.453944 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:113584]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454068 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:113588]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454114 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113589]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454226 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113590]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454293 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113591]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454411 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113592]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454517 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113593]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454592 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113594]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454718 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113595]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454787 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113596]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.454875 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:113597]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.458478 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_equal [id:113653]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.458757 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:113658]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.459021 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:113662]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.459084 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113663]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.459262 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113664]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.459331 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113665]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.459396 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113666]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.459751 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113667]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.459815 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113668]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.460186 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:113669]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.460242 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:113670]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:41:44.460315 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:113671]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0418 07:41:46.641129 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:47.565989 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:47.616461 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:47.626243 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:41:47.653383 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:41:47.653455 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:41:47.709237 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:41:47.709298 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:41:47.892644 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:43:09.512650 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:43:09.512735 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:43:09.515388 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:43:09.515426 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:43:09.534251 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:43:11.020402 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:48:29.216202 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:48:29.484328 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:127182], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 9], data[NULL], shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 9], data[NULL], shape[4], data[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 9]}
+W0418 07:48:29.484369 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[127182], with results index 0
+W0418 07:48:29.488395 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:127246], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 3], data[NULL], shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 3], data[NULL], shape[4], data[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 1, 3]}
+W0418 07:48:29.488421 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[127246], with results index 0
+W0418 07:48:29.583463 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:127775], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 1], data[NULL], shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 3], data[NULL], shape[4], data[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 3]}
+W0418 07:48:29.583523 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[127775], with results index 0
+W0418 07:48:29.706812 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:128310], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 1, 1, 8], data[NULL], shape[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 8], data[NULL], shape[4], data[Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 48, 48, 8]}
+W0418 07:48:29.706861 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[128310], with results index 0
+W0418 07:48:29.757246 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:128514], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 1], data[NULL], shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 32], data[NULL], shape[4], data[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 32]}
+W0418 07:48:29.757293 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[128514], with results index 0
+W0418 07:48:29.823741 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.expand_grad[id:128815], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.expand_grad
+  input_shape_or_datas: {shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 1, 128], data[NULL], shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 128], data[NULL], shape[4], data[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 40, 128]}
+W0418 07:48:29.823801 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.expand_grad[128815], with results index 0
+W0418 07:48:30.722976 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.slice_grad[id:133024], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.slice_grad
+  attrs: {[1], [], [-1], 
+  input_shape_or_datas: {shape[1, Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), 8], data[NULL], shape[1, Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0), Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), Broadcast(S16, S23, Max(Min(Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1), S0), S16), 0))), 0)), 8], data[NULL], shape[1], data[0], shape[1], data[S16]}
+W0418 07:48:30.723026 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.slice_grad[133024], with results index 0
+W0418 07:48:32.252279 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:48:33.488340 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:55:26.494853 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+I0418 07:55:29.376080 31800 pir_interpreter.cc:1568] New Executor is Running ...
+I0418 07:55:31.264288 31800 pir_interpreter.cc:1592] pir interpreter is running by multi-thread mode ...
+I0418 07:55:31.292822 35361 pir_interpreter.cc:1589] pir interpreter is running by trace mode ...
+[2025-04-18 07:55:34,717] DEEPMD WARNING Data loading buffer is empty or nearly empty. This may indicate a data loading bottleneck, and increasing the number of workers (--num-workers) may help.
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `coord0`, please ensure do not use `coord0`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `coord1`, please ensure do not use `coord1`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `index`, please ensure do not use `index`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `m_real_nei`, please ensure do not use `m_real_nei`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `nlist_mapping`, please ensure do not use `nlist_mapping`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `rr`, please ensure do not use `rr`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/static/nn/control_flow.py:1573: UserWarning: Return results has maybe unbound local variable `pad`, please ensure do not use `pad`after cond.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/base/dygraph/base.py:90: UserWarning: paddle.grad has unsupported parameter in jit: retain_graph, jit will discard it
+  warnings.warn(
+/home/huojun/software/miniconda3/envs/Deepmd_pddev_11.8/lib/python3.11/site-packages/paddle/pir/math_op_patch.py:180: UserWarning: Value do not have 'place' interface for pir graph mode, try not to use it. None will be returned.
+  warnings.warn(
+W0418 07:56:21.643702 31800 shape_optimization_pass.cc:292] pd_op.einsum DOES NOT have InferSymbolicShapeInterface!
+W0418 07:56:21.643745 31800 shape_optimization_pass.cc:331] Not found symbolic shape cache for pd_op.einsum[id:287806], op_infer_cache_key is :InferSymbolicShapeCacheKey - pd_op.einsum
+  attrs: {"sd,fdk->fsk", 
+  input_shape_or_datas: {shape[Mul(Add(S4, S5, 1), Add(S6, S7, 1), Add(S8, S9, 1)), 3], data[NULL], shape[1, 3, 3], data[NULL]}
+W0418 07:56:21.643769 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[287806], with results index 0
+W0418 07:56:21.643787 31800 shape_analysis.cc:168] Risk on SetSymbolForValueByStaticShape for contain_unknown_dim. The Value is a OpResult, defined by pd_op.einsum[287806], with results index 2
+W0418 07:56:21.663272 31800 shape_optimization_pass.cc:365] cached shape is not consistent with real shape for pd_op.if[id:288084]
+W0418 07:56:21.671406 31800 shape_optimization_pass.cc:365] cached shape is not consistent with real shape for pd_op.if[id:288109]
+W0418 07:56:21.675321 31800 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0418 07:56:21.675395 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:288360]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.675446 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.unsqueeze [id:288362]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.675482 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.expand [id:288364]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0418 07:56:21.675992 31800 infer_sym_utils.cc:135] ShapeOrDataDimExprs with incomplete data info. Need to create new DimExpr symbol.
+E0418 07:56:21.676086 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:288384]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.676093 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.reshape [id:288384]  carefully! shape[3] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.715692 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.subtract [id:288387]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.715806 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.multiply [id:288388]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.715914 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.sum [id:288390]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.715968 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.sqrt [id:288391]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716146 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288397]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716320 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288406]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716416 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288407]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716506 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288408]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716558 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288409]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716655 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288410]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716699 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288411]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.716955 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:288418]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717022 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:288420]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717109 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:288422]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717314 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288432]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717357 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288433]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717468 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288434]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717595 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288436]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717703 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288437]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717764 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288438]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717875 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288439]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.717929 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288440]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.718003 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:288441]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.718127 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:288444]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.718227 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:288447]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719257 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:288449]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719344 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:288451]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719492 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288455]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719637 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288461]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719683 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288462]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719794 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288463]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719861 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288464]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.719985 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288465]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720091 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288466]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720166 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288467]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720284 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288468]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720346 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288469]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720432 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:288470]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720569 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:288473]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720669 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.slice [id:288476]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720736 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_than [id:288478]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720796 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.logical_not [id:288480]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.720963 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288484]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721120 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288490]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721169 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288491]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721289 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288492]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721370 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288493]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721493 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288494]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721607 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288495]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721688 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288496]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721817 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288497]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721889 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288498]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.721982 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:288499]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.725682 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.greater_equal [id:288565]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.725963 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288571]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.726260 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.full_with_tensor [id:288577]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.726318 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288578]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.726495 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288579]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.726565 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288580]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.726630 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288581]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.726989 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288582]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.727061 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288583]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.727420 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.add [id:288584]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.727475 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.cast [id:288585]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+E0418 07:56:21.727545 31800 shape_optimization_pass.cc:199] Warning : Check InferSymbolicShape for pd_op.where [id:288586]  carefully! shape[0] of infer_sym_shape should be int64_t NOT a symbol!
+W0418 07:56:24.733755 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:56:24.797775 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:56:26.009156 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:56:26.086997 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:56:26.097277 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:56:26.119164 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:26.119243 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:26.173292 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:26.173352 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:26.323771 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:56:59.491241 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:59.491319 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:59.492394 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:59.492424 31800 fuse_shape_ops_into_generate_shape_op_pass.cc:169] The output_shape has no data.
+W0418 07:56:59.501992 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 07:57:00.795451 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+W0418 08:01:06.424401 31800 pattern_rewrite_driver.cc:235] The pattern rewrite did not converge after scanning 10 times
+[2025-04-18 08:01:08,116] DEEPMD INFO    batch       1: trn: rmse = 4.25e+01, rmse_e = 2.98e+00, rmse_f = 1.32e+00, lr = 2.00e-04
+[2025-04-18 08:01:08,117] DEEPMD INFO    batch       1: val: rmse = 3.94e+01, rmse_e = 2.35e+00, rmse_f = 1.23e+00
+[2025-04-18 08:01:08,120] DEEPMD INFO    batch       1: total wall time = 1339.82 s, eta = 1 day, 13:12:48
+[2025-04-18 08:01:28,693] DEEPMD INFO    batch     100: trn: rmse = 3.30e+01, rmse_e = 2.04e-01, rmse_f = 1.04e+00, lr = 2.00e-04
+[2025-04-18 08:01:28,693] DEEPMD INFO    batch     100: val: rmse = 3.44e+01, rmse_e = 3.14e-01, rmse_f = 1.09e+00
+[2025-04-18 08:01:28,696] DEEPMD INFO    batch     100: total wall time = 20.58 s, eta = 0:33:56
+[2025-04-18 08:01:50,775] DEEPMD INFO    batch     200: trn: rmse = 3.50e+01, rmse_e = 1.88e+00, rmse_f = 1.09e+00, lr = 2.00e-04
+[2025-04-18 08:01:50,776] DEEPMD INFO    batch     200: val: rmse = 3.04e+01, rmse_e = 1.75e+00, rmse_f = 9.59e-01
+[2025-04-18 08:01:50,778] DEEPMD INFO    batch     200: total wall time = 22.08 s, eta = 0:36:04
+[2025-04-18 08:02:11,329] DEEPMD INFO    batch     300: trn: rmse = 2.19e+01, rmse_e = 4.03e-01, rmse_f = 6.91e-01, lr = 2.00e-04
+[2025-04-18 08:02:11,330] DEEPMD INFO    batch     300: val: rmse = 2.49e+01, rmse_e = 3.75e-01, rmse_f = 7.88e-01
+[2025-04-18 08:02:11,333] DEEPMD INFO    batch     300: total wall time = 20.55 s, eta = 0:33:13
+[2025-04-18 08:02:31,953] DEEPMD INFO    batch     400: trn: rmse = 1.95e+01, rmse_e = 4.78e-01, rmse_f = 6.16e-01, lr = 2.00e-04
+[2025-04-18 08:02:31,953] DEEPMD INFO    batch     400: val: rmse = 3.05e+01, rmse_e = 3.58e-01, rmse_f = 9.63e-01
+[2025-04-18 08:02:31,955] DEEPMD INFO    batch     400: total wall time = 20.62 s, eta = 0:32:59
+[2025-04-18 08:02:53,483] DEEPMD INFO    batch     500: trn: rmse = 2.59e+01, rmse_e = 6.86e-01, rmse_f = 8.18e-01, lr = 2.00e-04
+[2025-04-18 08:02:53,483] DEEPMD INFO    batch     500: val: rmse = 2.79e+01, rmse_e = 7.40e-01, rmse_f = 8.82e-01
+[2025-04-18 08:02:53,486] DEEPMD INFO    batch     500: total wall time = 21.53 s, eta = 0:34:05
+[2025-04-18 08:03:15,989] DEEPMD INFO    batch     600: trn: rmse = 3.64e+01, rmse_e = 8.57e-02, rmse_f = 1.15e+00, lr = 2.00e-04
+[2025-04-18 08:03:15,989] DEEPMD INFO    batch     600: val: rmse = 3.04e+01, rmse_e = 9.32e-02, rmse_f = 9.61e-01
+[2025-04-18 08:03:15,991] DEEPMD INFO    batch     600: total wall time = 22.50 s, eta = 0:35:15
+[2025-04-18 08:03:25,595] DEEPMD WARNING Data loading buffer is empty or nearly empty. This may indicate a data loading bottleneck, and increasing the number of workers (--num-workers) may help.
+[2025-04-18 08:03:37,562] DEEPMD INFO    batch     700: trn: rmse = 2.80e+01, rmse_e = 3.79e-01, rmse_f = 8.87e-01, lr = 2.00e-04
+[2025-04-18 08:03:37,562] DEEPMD INFO    batch     700: val: rmse = 2.61e+01, rmse_e = 2.55e-01, rmse_f = 8.24e-01
+[2025-04-18 08:03:37,565] DEEPMD INFO    batch     700: total wall time = 21.57 s, eta = 0:33:26
+[2025-04-18 08:03:57,730] DEEPMD INFO    batch     800: trn: rmse = 1.72e+01, rmse_e = 2.63e-01, rmse_f = 5.44e-01, lr = 2.00e-04
+[2025-04-18 08:03:57,730] DEEPMD INFO    batch     800: val: rmse = 2.83e+01, rmse_e = 7.10e-02, rmse_f = 8.96e-01
+[2025-04-18 08:03:57,733] DEEPMD INFO    batch     800: total wall time = 20.17 s, eta = 0:30:55
+[2025-04-18 08:04:17,567] DEEPMD INFO    batch     900: trn: rmse = 1.51e+01, rmse_e = 5.35e-01, rmse_f = 4.77e-01, lr = 2.00e-04
+[2025-04-18 08:04:17,567] DEEPMD INFO    batch     900: val: rmse = 2.93e+01, rmse_e = 2.31e-01, rmse_f = 9.26e-01
+[2025-04-18 08:04:17,569] DEEPMD INFO    batch     900: total wall time = 19.84 s, eta = 0:30:05
+[2025-04-18 08:04:37,570] DEEPMD INFO    batch    1000: trn: rmse = 2.32e+01, rmse_e = 2.55e-01, rmse_f = 7.35e-01, lr = 2.00e-04
+[2025-04-18 08:04:37,571] DEEPMD INFO    batch    1000: val: rmse = 2.51e+01, rmse_e = 4.22e-01, rmse_f = 7.94e-01
+[2025-04-18 08:04:37,574] DEEPMD INFO    batch    1000: total wall time = 20.00 s, eta = 0:30:00
+[2025-04-18 08:04:58,662] DEEPMD INFO    batch    1100: trn: rmse = 1.85e+01, rmse_e = 8.93e-02, rmse_f = 5.84e-01, lr = 2.00e-04
+[2025-04-18 08:04:58,662] DEEPMD INFO    batch    1100: val: rmse = 1.48e+01, rmse_e = 5.31e-02, rmse_f = 4.68e-01
+[2025-04-18 08:04:58,664] DEEPMD INFO    batch    1100: total wall time = 21.09 s, eta = 0:31:17
+[2025-04-18 08:05:20,807] DEEPMD INFO    batch    1200: trn: rmse = 2.12e+01, rmse_e = 1.13e-01, rmse_f = 6.70e-01, lr = 2.00e-04
+[2025-04-18 08:05:20,808] DEEPMD INFO    batch    1200: val: rmse = 1.75e+01, rmse_e = 5.10e-02, rmse_f = 5.55e-01
+[2025-04-18 08:05:20,811] DEEPMD INFO    batch    1200: total wall time = 22.15 s, eta = 0:32:28
+[2025-04-18 08:05:41,856] DEEPMD INFO    batch    1300: trn: rmse = 2.54e+01, rmse_e = 3.08e-01, rmse_f = 8.04e-01, lr = 2.00e-04
+[2025-04-18 08:05:41,856] DEEPMD INFO    batch    1300: val: rmse = 2.19e+01, rmse_e = 2.93e-01, rmse_f = 6.93e-01
+[2025-04-18 08:05:41,858] DEEPMD INFO    batch    1300: total wall time = 21.05 s, eta = 0:30:31
+[2025-04-18 08:06:03,232] DEEPMD INFO    batch    1400: trn: rmse = 2.53e+01, rmse_e = 2.34e-01, rmse_f = 7.99e-01, lr = 2.00e-04
+[2025-04-18 08:06:03,232] DEEPMD INFO    batch    1400: val: rmse = 1.66e+01, rmse_e = 8.78e-02, rmse_f = 5.25e-01
+[2025-04-18 08:06:03,236] DEEPMD INFO    batch    1400: total wall time = 21.38 s, eta = 0:30:38
+[2025-04-18 08:06:23,563] DEEPMD INFO    batch    1500: trn: rmse = 2.18e+01, rmse_e = 8.37e-01, rmse_f = 6.90e-01, lr = 2.00e-04
+[2025-04-18 08:06:23,564] DEEPMD INFO    batch    1500: val: rmse = 2.74e+01, rmse_e = 1.09e+00, rmse_f = 8.64e-01
+[2025-04-18 08:06:23,565] DEEPMD INFO    batch    1500: total wall time = 20.33 s, eta = 0:28:48
+[2025-04-18 08:06:43,712] DEEPMD INFO    batch    1600: trn: rmse = 1.66e+01, rmse_e = 6.70e-02, rmse_f = 5.25e-01, lr = 2.00e-04
+[2025-04-18 08:06:43,712] DEEPMD INFO    batch    1600: val: rmse = 2.07e+01, rmse_e = 1.35e-01, rmse_f = 6.54e-01
+[2025-04-18 08:06:43,714] DEEPMD INFO    batch    1600: total wall time = 20.15 s, eta = 0:28:12
+[2025-04-18 08:07:05,407] DEEPMD INFO    batch    1700: trn: rmse = 2.29e+01, rmse_e = 1.76e-02, rmse_f = 7.24e-01, lr = 2.00e-04
+[2025-04-18 08:07:05,408] DEEPMD INFO    batch    1700: val: rmse = 1.21e+01, rmse_e = 9.38e-02, rmse_f = 3.83e-01
+[2025-04-18 08:07:05,411] DEEPMD INFO    batch    1700: total wall time = 21.70 s, eta = 0:30:00
+[2025-04-18 08:07:27,149] DEEPMD INFO    batch    1800: trn: rmse = 1.97e+01, rmse_e = 1.12e-01, rmse_f = 6.23e-01, lr = 2.00e-04
+[2025-04-18 08:07:27,150] DEEPMD INFO    batch    1800: val: rmse = 1.37e+01, rmse_e = 1.67e-01, rmse_f = 4.34e-01
+[2025-04-18 08:07:27,151] DEEPMD INFO    batch    1800: total wall time = 21.74 s, eta = 0:29:42
+[2025-04-18 08:07:48,633] DEEPMD INFO    batch    1900: trn: rmse = 1.75e+01, rmse_e = 9.71e-02, rmse_f = 5.55e-01, lr = 2.00e-04
+[2025-04-18 08:07:48,634] DEEPMD INFO    batch    1900: val: rmse = 1.45e+01, rmse_e = 1.80e-01, rmse_f = 4.57e-01
+[2025-04-18 08:07:48,636] DEEPMD INFO    batch    1900: total wall time = 21.49 s, eta = 0:29:00
+[2025-04-18 08:08:08,965] DEEPMD INFO    batch    2000: trn: rmse = 2.21e+01, rmse_e = 3.16e-01, rmse_f = 7.00e-01, lr = 2.00e-04
+[2025-04-18 08:08:08,965] DEEPMD INFO    batch    2000: val: rmse = 1.82e+01, rmse_e = 1.56e-01, rmse_f = 5.75e-01
+[2025-04-18 08:08:08,967] DEEPMD INFO    batch    2000: total wall time = 20.33 s, eta = 0:27:06
+[2025-04-18 08:08:09,200] DEEPMD INFO    Saved model to model.ckpt-2000.pd
+[2025-04-18 08:08:30,359] DEEPMD INFO    batch    2100: trn: rmse = 1.78e+01, rmse_e = 4.27e-01, rmse_f = 5.64e-01, lr = 2.00e-04
+[2025-04-18 08:08:30,360] DEEPMD INFO    batch    2100: val: rmse = 1.97e+01, rmse_e = 5.80e-01, rmse_f = 6.21e-01
+[2025-04-18 08:08:30,362] DEEPMD INFO    batch    2100: total wall time = 21.39 s, eta = 0:28:10
+[2025-04-18 08:08:52,102] DEEPMD INFO    batch    2200: trn: rmse = 1.57e+01, rmse_e = 4.22e-01, rmse_f = 4.95e-01, lr = 2.00e-04
+[2025-04-18 08:08:52,102] DEEPMD INFO    batch    2200: val: rmse = 1.21e+01, rmse_e = 4.78e-01, rmse_f = 3.81e-01
+[2025-04-18 08:08:52,104] DEEPMD INFO    batch    2200: total wall time = 21.74 s, eta = 0:28:15
+[2025-04-18 08:09:11,754] DEEPMD INFO    batch    2300: trn: rmse = 1.54e+01, rmse_e = 9.10e-01, rmse_f = 4.79e-01, lr = 2.00e-04
+[2025-04-18 08:09:11,754] DEEPMD INFO    batch    2300: val: rmse = 1.53e+01, rmse_e = 8.18e-01, rmse_f = 4.80e-01
+[2025-04-18 08:09:11,756] DEEPMD INFO    batch    2300: total wall time = 19.65 s, eta = 0:25:13
+[2025-04-18 08:09:31,780] DEEPMD INFO    batch    2400: trn: rmse = 1.19e+01, rmse_e = 1.53e-01, rmse_f = 3.76e-01, lr = 2.00e-04
+[2025-04-18 08:09:31,781] DEEPMD INFO    batch    2400: val: rmse = 1.31e+01, rmse_e = 4.57e-02, rmse_f = 4.14e-01
+[2025-04-18 08:09:31,783] DEEPMD INFO    batch    2400: total wall time = 20.03 s, eta = 0:25:22
+[2025-04-18 08:09:51,476] DEEPMD INFO    batch    2500: trn: rmse = 1.75e+01, rmse_e = 7.01e-02, rmse_f = 5.53e-01, lr = 2.00e-04
+[2025-04-18 08:09:51,476] DEEPMD INFO    batch    2500: val: rmse = 2.28e+01, rmse_e = 1.29e-01, rmse_f = 7.20e-01
+[2025-04-18 08:09:51,478] DEEPMD INFO    batch    2500: total wall time = 19.70 s, eta = 0:24:37
+[2025-04-18 08:10:12,011] DEEPMD INFO    batch    2600: trn: rmse = 1.41e+01, rmse_e = 6.63e-01, rmse_f = 4.42e-01, lr = 2.00e-04
+[2025-04-18 08:10:12,011] DEEPMD INFO    batch    2600: val: rmse = 1.52e+01, rmse_e = 6.74e-01, rmse_f = 4.76e-01
+[2025-04-18 08:10:12,013] DEEPMD INFO    batch    2600: total wall time = 20.53 s, eta = 0:25:19
+[2025-04-18 08:10:32,449] DEEPMD INFO    batch    2700: trn: rmse = 1.30e+01, rmse_e = 1.78e-01, rmse_f = 4.10e-01, lr = 2.00e-04
+[2025-04-18 08:10:32,449] DEEPMD INFO    batch    2700: val: rmse = 1.39e+01, rmse_e = 1.74e-01, rmse_f = 4.41e-01
+[2025-04-18 08:10:32,451] DEEPMD INFO    batch    2700: total wall time = 20.44 s, eta = 0:24:51
+[2025-04-18 08:10:52,526] DEEPMD INFO    batch    2800: trn: rmse = 2.05e+01, rmse_e = 2.81e-01, rmse_f = 6.47e-01, lr = 2.00e-04
+[2025-04-18 08:10:52,526] DEEPMD INFO    batch    2800: val: rmse = 1.32e+01, rmse_e = 1.10e-01, rmse_f = 4.17e-01
+[2025-04-18 08:10:52,528] DEEPMD INFO    batch    2800: total wall time = 20.08 s, eta = 0:24:05
+[2025-04-18 08:11:12,096] DEEPMD INFO    batch    2900: trn: rmse = 1.60e+01, rmse_e = 3.46e-01, rmse_f = 5.06e-01, lr = 2.00e-04
+[2025-04-18 08:11:12,096] DEEPMD INFO    batch    2900: val: rmse = 1.99e+01, rmse_e = 3.78e-01, rmse_f = 6.30e-01
+[2025-04-18 08:11:12,098] DEEPMD INFO    batch    2900: total wall time = 19.57 s, eta = 0:23:09
+[2025-04-18 08:11:32,338] DEEPMD INFO    batch    3000: trn: rmse = 1.92e+01, rmse_e = 9.61e-02, rmse_f = 6.07e-01, lr = 2.00e-04
+[2025-04-18 08:11:32,339] DEEPMD INFO    batch    3000: val: rmse = 2.18e+01, rmse_e = 5.40e-02, rmse_f = 6.88e-01
+[2025-04-18 08:11:32,342] DEEPMD INFO    batch    3000: total wall time = 20.24 s, eta = 0:23:37
+[2025-04-18 08:11:52,532] DEEPMD INFO    batch    3100: trn: rmse = 1.46e+01, rmse_e = 3.37e-01, rmse_f = 4.62e-01, lr = 2.00e-04
+[2025-04-18 08:11:52,533] DEEPMD INFO    batch    3100: val: rmse = 1.98e+01, rmse_e = 1.87e-01, rmse_f = 6.26e-01
+[2025-04-18 08:11:52,535] DEEPMD INFO    batch    3100: total wall time = 20.19 s, eta = 0:23:13
+[2025-04-18 08:12:13,715] DEEPMD INFO    batch    3200: trn: rmse = 1.18e+01, rmse_e = 5.25e-01, rmse_f = 3.72e-01, lr = 2.00e-04
+[2025-04-18 08:12:13,716] DEEPMD INFO    batch    3200: val: rmse = 1.23e+01, rmse_e = 5.15e-01, rmse_f = 3.87e-01
+[2025-04-18 08:12:13,718] DEEPMD INFO    batch    3200: total wall time = 21.18 s, eta = 0:24:00
+[2025-04-18 08:12:34,218] DEEPMD INFO    batch    3300: trn: rmse = 2.32e+01, rmse_e = 1.07e-02, rmse_f = 7.35e-01, lr = 2.00e-04
+[2025-04-18 08:12:34,218] DEEPMD INFO    batch    3300: val: rmse = 1.40e+01, rmse_e = 1.09e-02, rmse_f = 4.43e-01
+[2025-04-18 08:12:34,221] DEEPMD INFO    batch    3300: total wall time = 20.50 s, eta = 0:22:53
+[2025-04-18 08:12:55,094] DEEPMD WARNING Data loading buffer is empty or nearly empty. This may indicate a data loading bottleneck, and increasing the number of workers (--num-workers) may help.
+[2025-04-18 08:12:55,166] DEEPMD INFO    batch    3400: trn: rmse = 2.91e+01, rmse_e = 3.88e-01, rmse_f = 9.20e-01, lr = 2.00e-04
+[2025-04-18 08:12:55,166] DEEPMD INFO    batch    3400: val: rmse = 2.31e+01, rmse_e = 3.05e-01, rmse_f = 7.30e-01
+[2025-04-18 08:12:55,168] DEEPMD INFO    batch    3400: total wall time = 20.95 s, eta = 0:23:02
+[2025-04-18 08:13:17,456] DEEPMD INFO    batch    3500: trn: rmse = 1.29e+01, rmse_e = 5.46e-02, rmse_f = 4.07e-01, lr = 2.00e-04
+[2025-04-18 08:13:17,457] DEEPMD INFO    batch    3500: val: rmse = 1.17e+01, rmse_e = 7.53e-02, rmse_f = 3.70e-01
+[2025-04-18 08:13:17,460] DEEPMD INFO    batch    3500: total wall time = 22.29 s, eta = 0:24:08
+[2025-04-18 08:13:37,444] DEEPMD INFO    batch    3600: trn: rmse = 1.67e+01, rmse_e = 5.99e-01, rmse_f = 5.28e-01, lr = 2.00e-04
+[2025-04-18 08:13:37,445] DEEPMD INFO    batch    3600: val: rmse = 2.07e+01, rmse_e = 6.41e-01, rmse_f = 6.54e-01
+[2025-04-18 08:13:37,447] DEEPMD INFO    batch    3600: total wall time = 19.99 s, eta = 0:21:19
+[2025-04-18 08:13:59,742] DEEPMD INFO    batch    3700: trn: rmse = 2.03e+01, rmse_e = 6.17e-01, rmse_f = 6.42e-01, lr = 2.00e-04
+[2025-04-18 08:13:59,743] DEEPMD INFO    batch    3700: val: rmse = 1.08e+01, rmse_e = 7.62e-01, rmse_f = 3.35e-01
+[2025-04-18 08:13:59,744] DEEPMD INFO    batch    3700: total wall time = 22.30 s, eta = 0:23:24
+[2025-04-18 08:14:20,849] DEEPMD INFO    batch    3800: trn: rmse = 2.47e+01, rmse_e = 2.20e-03, rmse_f = 7.81e-01, lr = 2.00e-04
+[2025-04-18 08:14:20,849] DEEPMD INFO    batch    3800: val: rmse = 1.63e+01, rmse_e = 9.95e-02, rmse_f = 5.16e-01
+[2025-04-18 08:14:20,851] DEEPMD INFO    batch    3800: total wall time = 21.11 s, eta = 0:21:48
+[2025-04-18 08:14:41,511] DEEPMD INFO    batch    3900: trn: rmse = 2.26e+01, rmse_e = 1.01e+00, rmse_f = 7.13e-01, lr = 2.00e-04
+[2025-04-18 08:14:41,512] DEEPMD INFO    batch    3900: val: rmse = 1.86e+01, rmse_e = 1.00e+00, rmse_f = 5.86e-01
+[2025-04-18 08:14:41,514] DEEPMD INFO    batch    3900: total wall time = 20.66 s, eta = 0:21:00
+[2025-04-18 08:15:04,351] DEEPMD INFO    batch    4000: trn: rmse = 1.16e+01, rmse_e = 1.73e-01, rmse_f = 3.65e-01, lr = 2.00e-04
+[2025-04-18 08:15:04,351] DEEPMD INFO    batch    4000: val: rmse = 1.06e+01, rmse_e = 6.69e-02, rmse_f = 3.35e-01
+[2025-04-18 08:15:04,354] DEEPMD INFO    batch    4000: total wall time = 22.84 s, eta = 0:22:50
+[2025-04-18 08:15:04,577] DEEPMD INFO    Saved model to model.ckpt-4000.pd
+[2025-04-18 08:15:25,633] DEEPMD INFO    batch    4100: trn: rmse = 2.21e+01, rmse_e = 1.65e-01, rmse_f = 6.99e-01, lr = 2.00e-04
+[2025-04-18 08:15:25,634] DEEPMD INFO    batch    4100: val: rmse = 1.44e+01, rmse_e = 1.42e-01, rmse_f = 4.55e-01
+[2025-04-18 08:15:25,637] DEEPMD INFO    batch    4100: total wall time = 21.28 s, eta = 0:20:55
+[2025-04-18 08:15:47,130] DEEPMD INFO    batch    4200: trn: rmse = 1.10e+01, rmse_e = 7.23e-01, rmse_f = 3.41e-01, lr = 2.00e-04
+[2025-04-18 08:15:47,130] DEEPMD INFO    batch    4200: val: rmse = 1.21e+01, rmse_e = 8.56e-01, rmse_f = 3.75e-01
+[2025-04-18 08:15:47,133] DEEPMD INFO    batch    4200: total wall time = 21.50 s, eta = 0:20:46
+[2025-04-18 08:16:08,104] DEEPMD INFO    batch    4300: trn: rmse = 2.32e+01, rmse_e = 2.95e-01, rmse_f = 7.33e-01, lr = 2.00e-04
+[2025-04-18 08:16:08,105] DEEPMD INFO    batch    4300: val: rmse = 1.05e+01, rmse_e = 2.89e-01, rmse_f = 3.31e-01
+[2025-04-18 08:16:08,107] DEEPMD INFO    batch    4300: total wall time = 20.97 s, eta = 0:19:55
+[2025-04-18 08:16:29,407] DEEPMD INFO    batch    4400: trn: rmse = 1.32e+01, rmse_e = 2.91e-02, rmse_f = 4.19e-01, lr = 2.00e-04
+[2025-04-18 08:16:29,407] DEEPMD INFO    batch    4400: val: rmse = 1.53e+01, rmse_e = 6.23e-02, rmse_f = 4.83e-01
+[2025-04-18 08:16:29,409] DEEPMD INFO    batch    4400: total wall time = 21.30 s, eta = 0:19:52
+[2025-04-18 08:16:50,659] DEEPMD INFO    batch    4500: trn: rmse = 1.46e+01, rmse_e = 1.12e+00, rmse_f = 4.58e-01, lr = 2.00e-04
+[2025-04-18 08:16:50,659] DEEPMD INFO    batch    4500: val: rmse = 1.15e+01, rmse_e = 1.23e+00, rmse_f = 3.63e-01
+[2025-04-18 08:16:50,662] DEEPMD INFO    batch    4500: total wall time = 21.25 s, eta = 0:19:28
+[2025-04-18 08:17:12,803] DEEPMD INFO    batch    4600: trn: rmse = 1.24e+01, rmse_e = 2.17e-01, rmse_f = 3.91e-01, lr = 2.00e-04
+[2025-04-18 08:17:12,804] DEEPMD INFO    batch    4600: val: rmse = 1.05e+01, rmse_e = 1.34e-01, rmse_f = 3.31e-01
+[2025-04-18 08:17:12,807] DEEPMD INFO    batch    4600: total wall time = 22.14 s, eta = 0:19:55
+[2025-04-18 08:17:34,138] DEEPMD INFO    batch    4700: trn: rmse = 1.08e+01, rmse_e = 1.11e+00, rmse_f = 3.28e-01, lr = 2.00e-04
+[2025-04-18 08:17:34,139] DEEPMD INFO    batch    4700: val: rmse = 1.15e+01, rmse_e = 9.60e-01, rmse_f = 3.53e-01
+[2025-04-18 08:17:34,141] DEEPMD INFO    batch    4700: total wall time = 21.33 s, eta = 0:18:50
+[2025-04-18 08:17:54,596] DEEPMD INFO    batch    4800: trn: rmse = 2.27e+01, rmse_e = 8.73e-01, rmse_f = 7.18e-01, lr = 2.00e-04
+[2025-04-18 08:17:54,596] DEEPMD INFO    batch    4800: val: rmse = 1.82e+01, rmse_e = 9.08e-01, rmse_f = 5.76e-01
+[2025-04-18 08:17:54,600] DEEPMD INFO    batch    4800: total wall time = 20.46 s, eta = 0:17:43
+[2025-04-18 08:18:16,439] DEEPMD INFO    batch    4900: trn: rmse = 1.83e+01, rmse_e = 3.08e-03, rmse_f = 5.79e-01, lr = 2.00e-04
+[2025-04-18 08:18:16,440] DEEPMD INFO    batch    4900: val: rmse = 1.15e+01, rmse_e = 7.15e-03, rmse_f = 3.64e-01
+[2025-04-18 08:18:16,442] DEEPMD INFO    batch    4900: total wall time = 21.84 s, eta = 0:18:33
+[2025-04-18 08:18:37,339] DEEPMD INFO    batch    5000: trn: rmse = 1.11e+01, rmse_e = 3.07e-01, rmse_f = 3.49e-01, lr = 2.00e-04
+[2025-04-18 08:18:37,339] DEEPMD INFO    batch    5000: val: rmse = 1.30e+01, rmse_e = 3.21e-01, rmse_f = 4.11e-01
+[2025-04-18 08:18:37,342] DEEPMD INFO    batch    5000: total wall time = 20.90 s, eta = 0:17:24
+[2025-04-18 08:18:59,447] DEEPMD INFO    batch    5100: trn: rmse = 1.30e+00, rmse_e = 2.21e-03, rmse_f = 3.44e-01, lr = 2.65e-06
+[2025-04-18 08:18:59,448] DEEPMD INFO    batch    5100: val: rmse = 1.19e+00, rmse_e = 1.62e-02, rmse_f = 3.04e-01
+[2025-04-18 08:18:59,450] DEEPMD INFO    batch    5100: total wall time = 22.11 s, eta = 0:18:03
+[2025-04-18 08:19:21,418] DEEPMD INFO    batch    5200: trn: rmse = 1.43e+00, rmse_e = 1.57e-02, rmse_f = 3.79e-01, lr = 2.65e-06
+[2025-04-18 08:19:21,418] DEEPMD INFO    batch    5200: val: rmse = 2.30e+00, rmse_e = 5.76e-02, rmse_f = 5.92e-01
+[2025-04-18 08:19:21,421] DEEPMD INFO    batch    5200: total wall time = 21.97 s, eta = 0:17:34
+[2025-04-18 08:19:42,496] DEEPMD INFO    batch    5300: trn: rmse = 1.63e+00, rmse_e = 5.63e-02, rmse_f = 3.20e-01, lr = 2.65e-06
+[2025-04-18 08:19:42,497] DEEPMD INFO    batch    5300: val: rmse = 1.80e+00, rmse_e = 5.36e-03, rmse_f = 4.76e-01
+[2025-04-18 08:19:42,500] DEEPMD INFO    batch    5300: total wall time = 21.08 s, eta = 0:16:30
+[2025-04-18 08:20:04,292] DEEPMD INFO    batch    5400: trn: rmse = 1.82e+00, rmse_e = 2.39e-02, rmse_f = 4.79e-01, lr = 2.65e-06
+[2025-04-18 08:20:04,293] DEEPMD INFO    batch    5400: val: rmse = 2.32e+00, rmse_e = 4.86e-02, rmse_f = 6.01e-01
+[2025-04-18 08:20:04,296] DEEPMD INFO    batch    5400: total wall time = 21.80 s, eta = 0:16:42
+[2025-04-18 08:20:25,233] DEEPMD INFO    batch    5500: trn: rmse = 1.46e+00, rmse_e = 2.98e-02, rmse_f = 3.56e-01, lr = 2.65e-06
+[2025-04-18 08:20:25,234] DEEPMD INFO    batch    5500: val: rmse = 1.56e+00, rmse_e = 1.80e-02, rmse_f = 4.11e-01
+[2025-04-18 08:20:25,237] DEEPMD INFO    batch    5500: total wall time = 20.94 s, eta = 0:15:42
+[2025-04-18 08:20:46,531] DEEPMD INFO    batch    5600: trn: rmse = 1.20e+00, rmse_e = 1.71e-02, rmse_f = 3.07e-01, lr = 2.65e-06
+[2025-04-18 08:20:46,531] DEEPMD INFO    batch    5600: val: rmse = 1.78e+00, rmse_e = 1.48e-02, rmse_f = 4.69e-01
+[2025-04-18 08:20:46,534] DEEPMD INFO    batch    5600: total wall time = 21.30 s, eta = 0:15:37
+[2025-04-18 08:21:09,061] DEEPMD INFO    batch    5700: trn: rmse = 1.42e+00, rmse_e = 3.99e-02, rmse_f = 3.15e-01, lr = 2.65e-06
+[2025-04-18 08:21:09,062] DEEPMD INFO    batch    5700: val: rmse = 1.98e+00, rmse_e = 2.45e-02, rmse_f = 5.21e-01
+[2025-04-18 08:21:09,064] DEEPMD INFO    batch    5700: total wall time = 22.53 s, eta = 0:16:08
+[2025-04-18 08:21:29,838] DEEPMD INFO    batch    5800: trn: rmse = 1.33e+00, rmse_e = 9.87e-03, rmse_f = 3.49e-01, lr = 2.65e-06
+[2025-04-18 08:21:29,838] DEEPMD INFO    batch    5800: val: rmse = 1.84e+00, rmse_e = 1.26e-02, rmse_f = 4.86e-01
+[2025-04-18 08:21:29,841] DEEPMD INFO    batch    5800: total wall time = 20.78 s, eta = 0:14:32
+[2025-04-18 08:21:51,628] DEEPMD INFO    batch    5900: trn: rmse = 1.13e+00, rmse_e = 3.24e-03, rmse_f = 2.99e-01, lr = 2.65e-06
+[2025-04-18 08:21:51,628] DEEPMD INFO    batch    5900: val: rmse = 1.78e+00, rmse_e = 3.46e-02, rmse_f = 4.64e-01
+[2025-04-18 08:21:51,631] DEEPMD INFO    batch    5900: total wall time = 21.79 s, eta = 0:14:53
+[2025-04-18 08:22:13,902] DEEPMD INFO    batch    6000: trn: rmse = 1.29e+00, rmse_e = 1.65e-02, rmse_f = 3.31e-01, lr = 2.65e-06
+[2025-04-18 08:22:13,903] DEEPMD INFO    batch    6000: val: rmse = 1.33e+00, rmse_e = 3.71e-02, rmse_f = 2.96e-01
+[2025-04-18 08:22:13,905] DEEPMD INFO    batch    6000: total wall time = 22.27 s, eta = 0:14:50
+[2025-04-18 08:22:14,107] DEEPMD INFO    Saved model to model.ckpt-6000.pd
+[2025-04-18 08:22:35,325] DEEPMD INFO    batch    6100: trn: rmse = 2.92e+00, rmse_e = 3.79e-03, rmse_f = 7.73e-01, lr = 2.65e-06
+[2025-04-18 08:22:35,325] DEEPMD INFO    batch    6100: val: rmse = 1.64e+00, rmse_e = 2.28e-02, rmse_f = 4.17e-01
+[2025-04-18 08:22:35,328] DEEPMD INFO    batch    6100: total wall time = 21.42 s, eta = 0:13:55
+[2025-04-18 08:22:57,282] DEEPMD INFO    batch    6200: trn: rmse = 1.31e+00, rmse_e = 2.88e-02, rmse_f = 3.40e-01, lr = 2.65e-06
+[2025-04-18 08:22:57,283] DEEPMD INFO    batch    6200: val: rmse = 9.74e-01, rmse_e = 3.01e-03, rmse_f = 2.58e-01
+[2025-04-18 08:22:57,285] DEEPMD INFO    batch    6200: total wall time = 21.96 s, eta = 0:13:54
+[2025-04-18 08:23:18,639] DEEPMD INFO    batch    6300: trn: rmse = 1.82e+00, rmse_e = 6.11e-03, rmse_f = 4.83e-01, lr = 2.65e-06
+[2025-04-18 08:23:18,639] DEEPMD INFO    batch    6300: val: rmse = 1.51e+00, rmse_e = 4.67e-02, rmse_f = 3.19e-01
+[2025-04-18 08:23:18,642] DEEPMD INFO    batch    6300: total wall time = 21.36 s, eta = 0:13:10
+[2025-04-18 08:23:40,307] DEEPMD INFO    batch    6400: trn: rmse = 1.61e+00, rmse_e = 2.48e-03, rmse_f = 4.27e-01, lr = 2.65e-06
+[2025-04-18 08:23:40,307] DEEPMD INFO    batch    6400: val: rmse = 1.11e+00, rmse_e = 1.23e-02, rmse_f = 2.92e-01
+[2025-04-18 08:23:40,310] DEEPMD INFO    batch    6400: total wall time = 21.67 s, eta = 0:13:00
+[2025-04-18 08:24:03,094] DEEPMD INFO    batch    6500: trn: rmse = 1.06e+00, rmse_e = 1.26e-03, rmse_f = 2.80e-01, lr = 2.65e-06
+[2025-04-18 08:24:03,094] DEEPMD INFO    batch    6500: val: rmse = 1.99e+00, rmse_e = 8.32e-03, rmse_f = 5.27e-01
+[2025-04-18 08:24:03,098] DEEPMD INFO    batch    6500: total wall time = 22.79 s, eta = 0:13:17
+[2025-04-18 08:24:25,029] DEEPMD INFO    batch    6600: trn: rmse = 2.23e+00, rmse_e = 2.70e-02, rmse_f = 5.88e-01, lr = 2.65e-06
+[2025-04-18 08:24:25,030] DEEPMD INFO    batch    6600: val: rmse = 1.19e+00, rmse_e = 5.71e-03, rmse_f = 3.15e-01
+[2025-04-18 08:24:25,032] DEEPMD INFO    batch    6600: total wall time = 21.93 s, eta = 0:12:25
+[2025-04-18 08:24:46,660] DEEPMD INFO    batch    6700: trn: rmse = 1.97e+00, rmse_e = 2.45e-02, rmse_f = 5.18e-01, lr = 2.65e-06
+[2025-04-18 08:24:46,660] DEEPMD INFO    batch    6700: val: rmse = 1.13e+00, rmse_e = 1.17e-02, rmse_f = 2.94e-01
+[2025-04-18 08:24:46,663] DEEPMD INFO    batch    6700: total wall time = 21.63 s, eta = 0:11:53
+[2025-04-18 08:25:08,040] DEEPMD WARNING Data loading buffer is empty or nearly empty. This may indicate a data loading bottleneck, and increasing the number of workers (--num-workers) may help.
+[2025-04-18 08:25:08,120] DEEPMD INFO    batch    6800: trn: rmse = 2.59e+00, rmse_e = 5.28e-02, rmse_f = 6.72e-01, lr = 2.65e-06
+[2025-04-18 08:25:08,120] DEEPMD INFO    batch    6800: val: rmse = 1.69e+00, rmse_e = 1.58e-03, rmse_f = 4.47e-01
+[2025-04-18 08:25:08,123] DEEPMD INFO    batch    6800: total wall time = 21.46 s, eta = 0:11:26
+[2025-04-18 08:25:29,573] DEEPMD INFO    batch    6900: trn: rmse = 2.02e+00, rmse_e = 9.38e-03, rmse_f = 5.34e-01, lr = 2.65e-06
+[2025-04-18 08:25:29,574] DEEPMD INFO    batch    6900: val: rmse = 1.15e+00, rmse_e = 2.52e-02, rmse_f = 2.99e-01
+[2025-04-18 08:25:29,577] DEEPMD INFO    batch    6900: total wall time = 21.45 s, eta = 0:11:05
+[2025-04-18 08:25:51,136] DEEPMD INFO    batch    7000: trn: rmse = 2.17e+00, rmse_e = 5.63e-03, rmse_f = 5.76e-01, lr = 2.65e-06
+[2025-04-18 08:25:51,137] DEEPMD INFO    batch    7000: val: rmse = 1.66e+00, rmse_e = 9.67e-03, rmse_f = 4.37e-01
+[2025-04-18 08:25:51,140] DEEPMD INFO    batch    7000: total wall time = 21.56 s, eta = 0:10:46
+[2025-04-18 08:26:12,070] DEEPMD INFO    batch    7100: trn: rmse = 1.22e+00, rmse_e = 1.94e-02, rmse_f = 3.07e-01, lr = 2.65e-06
+[2025-04-18 08:26:12,071] DEEPMD INFO    batch    7100: val: rmse = 9.70e-01, rmse_e = 1.95e-04, rmse_f = 2.57e-01
+[2025-04-18 08:26:12,073] DEEPMD INFO    batch    7100: total wall time = 20.93 s, eta = 0:10:07
+[2025-04-18 08:26:33,025] DEEPMD INFO    batch    7200: trn: rmse = 2.02e+00, rmse_e = 1.13e-02, rmse_f = 5.34e-01, lr = 2.65e-06
+[2025-04-18 08:26:33,026] DEEPMD INFO    batch    7200: val: rmse = 1.17e+00, rmse_e = 5.37e-03, rmse_f = 3.10e-01
+[2025-04-18 08:26:33,028] DEEPMD INFO    batch    7200: total wall time = 20.95 s, eta = 0:09:46
+[2025-04-18 08:26:54,643] DEEPMD INFO    batch    7300: trn: rmse = 1.56e+00, rmse_e = 8.83e-03, rmse_f = 4.12e-01, lr = 2.65e-06
+[2025-04-18 08:26:54,643] DEEPMD INFO    batch    7300: val: rmse = 1.17e+00, rmse_e = 8.65e-03, rmse_f = 3.10e-01
+[2025-04-18 08:26:54,646] DEEPMD INFO    batch    7300: total wall time = 21.62 s, eta = 0:09:43
+[2025-04-18 08:27:16,001] DEEPMD INFO    batch    7400: trn: rmse = 1.39e+00, rmse_e = 5.47e-03, rmse_f = 3.66e-01, lr = 2.65e-06
+[2025-04-18 08:27:16,001] DEEPMD INFO    batch    7400: val: rmse = 2.33e+00, rmse_e = 4.76e-02, rmse_f = 6.04e-01
+[2025-04-18 08:27:16,004] DEEPMD INFO    batch    7400: total wall time = 21.36 s, eta = 0:09:15
+[2025-04-18 08:27:38,001] DEEPMD INFO    batch    7500: trn: rmse = 1.21e+00, rmse_e = 2.57e-03, rmse_f = 3.21e-01, lr = 2.65e-06
+[2025-04-18 08:27:38,001] DEEPMD INFO    batch    7500: val: rmse = 1.34e+00, rmse_e = 2.94e-02, rmse_f = 3.21e-01
+[2025-04-18 08:27:38,003] DEEPMD INFO    batch    7500: total wall time = 22.00 s, eta = 0:09:09
+[2025-04-18 08:28:00,249] DEEPMD INFO    batch    7600: trn: rmse = 1.44e+00, rmse_e = 5.27e-03, rmse_f = 3.82e-01, lr = 2.65e-06
+[2025-04-18 08:28:00,249] DEEPMD INFO    batch    7600: val: rmse = 2.15e+00, rmse_e = 2.00e-02, rmse_f = 5.67e-01
+[2025-04-18 08:28:00,252] DEEPMD INFO    batch    7600: total wall time = 22.25 s, eta = 0:08:53
+[2025-04-18 08:28:21,516] DEEPMD INFO    batch    7700: trn: rmse = 1.96e+00, rmse_e = 2.09e-02, rmse_f = 5.17e-01, lr = 2.65e-06
+[2025-04-18 08:28:21,517] DEEPMD INFO    batch    7700: val: rmse = 1.13e+00, rmse_e = 1.40e-02, rmse_f = 2.90e-01
+[2025-04-18 08:28:21,519] DEEPMD INFO    batch    7700: total wall time = 21.27 s, eta = 0:08:09
+[2025-04-18 08:28:41,663] DEEPMD INFO    batch    7800: trn: rmse = 1.84e+00, rmse_e = 4.65e-03, rmse_f = 4.88e-01, lr = 2.65e-06
+[2025-04-18 08:28:41,663] DEEPMD INFO    batch    7800: val: rmse = 1.22e+00, rmse_e = 2.64e-02, rmse_f = 2.94e-01
+[2025-04-18 08:28:41,665] DEEPMD INFO    batch    7800: total wall time = 20.15 s, eta = 0:07:23
+[2025-04-18 08:29:02,303] DEEPMD INFO    batch    7900: trn: rmse = 1.89e+00, rmse_e = 2.90e-02, rmse_f = 4.95e-01, lr = 2.65e-06
+[2025-04-18 08:29:02,303] DEEPMD INFO    batch    7900: val: rmse = 1.55e+00, rmse_e = 3.50e-02, rmse_f = 4.01e-01
+[2025-04-18 08:29:02,305] DEEPMD INFO    batch    7900: total wall time = 20.64 s, eta = 0:07:13
+[2025-04-18 08:29:24,195] DEEPMD INFO    batch    8000: trn: rmse = 1.35e+00, rmse_e = 2.47e-02, rmse_f = 3.34e-01, lr = 2.65e-06
+[2025-04-18 08:29:24,195] DEEPMD INFO    batch    8000: val: rmse = 1.42e+00, rmse_e = 4.22e-02, rmse_f = 3.09e-01
+[2025-04-18 08:29:24,198] DEEPMD INFO    batch    8000: total wall time = 21.89 s, eta = 0:07:17
+[2025-04-18 08:29:24,401] DEEPMD INFO    Saved model to model.ckpt-8000.pd
+[2025-04-18 08:29:46,450] DEEPMD INFO    batch    8100: trn: rmse = 1.38e+00, rmse_e = 1.26e-03, rmse_f = 3.64e-01, lr = 2.65e-06
+[2025-04-18 08:29:46,450] DEEPMD INFO    batch    8100: val: rmse = 1.10e+00, rmse_e = 1.78e-02, rmse_f = 2.77e-01
+[2025-04-18 08:29:46,452] DEEPMD INFO    batch    8100: total wall time = 22.25 s, eta = 0:07:02
+[2025-04-18 08:30:08,976] DEEPMD INFO    batch    8200: trn: rmse = 1.56e+00, rmse_e = 1.66e-02, rmse_f = 4.04e-01, lr = 2.65e-06
+[2025-04-18 08:30:08,977] DEEPMD INFO    batch    8200: val: rmse = 1.34e+00, rmse_e = 6.68e-03, rmse_f = 3.54e-01
+[2025-04-18 08:30:08,979] DEEPMD INFO    batch    8200: total wall time = 22.53 s, eta = 0:06:45
+[2025-04-18 08:30:30,792] DEEPMD INFO    batch    8300: trn: rmse = 1.43e+00, rmse_e = 7.55e-03, rmse_f = 3.80e-01, lr = 2.65e-06
+[2025-04-18 08:30:30,792] DEEPMD INFO    batch    8300: val: rmse = 1.66e+00, rmse_e = 6.85e-04, rmse_f = 4.41e-01
+[2025-04-18 08:30:30,794] DEEPMD INFO    batch    8300: total wall time = 21.81 s, eta = 0:06:10
+[2025-04-18 08:30:52,408] DEEPMD INFO    batch    8400: trn: rmse = 1.19e+00, rmse_e = 1.34e-03, rmse_f = 3.14e-01, lr = 2.65e-06
+[2025-04-18 08:30:52,409] DEEPMD INFO    batch    8400: val: rmse = 1.97e+00, rmse_e = 1.28e-02, rmse_f = 5.20e-01
+[2025-04-18 08:30:52,411] DEEPMD INFO    batch    8400: total wall time = 21.62 s, eta = 0:05:45
+[2025-04-18 08:31:13,618] DEEPMD INFO    batch    8500: trn: rmse = 1.78e+00, rmse_e = 8.00e-03, rmse_f = 4.72e-01, lr = 2.65e-06
+[2025-04-18 08:31:13,618] DEEPMD INFO    batch    8500: val: rmse = 1.25e+00, rmse_e = 1.09e-03, rmse_f = 3.31e-01
+[2025-04-18 08:31:13,620] DEEPMD INFO    batch    8500: total wall time = 21.21 s, eta = 0:05:18
+[2025-04-18 08:31:34,071] DEEPMD INFO    batch    8600: trn: rmse = 2.37e+00, rmse_e = 2.26e-02, rmse_f = 6.26e-01, lr = 2.65e-06
+[2025-04-18 08:31:34,072] DEEPMD INFO    batch    8600: val: rmse = 1.22e+00, rmse_e = 1.88e-03, rmse_f = 3.24e-01
+[2025-04-18 08:31:34,074] DEEPMD INFO    batch    8600: total wall time = 20.45 s, eta = 0:04:46
+[2025-04-18 08:31:55,205] DEEPMD INFO    batch    8700: trn: rmse = 1.23e+00, rmse_e = 3.16e-04, rmse_f = 3.26e-01, lr = 2.65e-06
+[2025-04-18 08:31:55,205] DEEPMD INFO    batch    8700: val: rmse = 1.34e+00, rmse_e = 2.97e-02, rmse_f = 3.19e-01
+[2025-04-18 08:31:55,208] DEEPMD INFO    batch    8700: total wall time = 21.13 s, eta = 0:04:34
+[2025-04-18 08:32:16,675] DEEPMD INFO    batch    8800: trn: rmse = 1.25e+00, rmse_e = 3.75e-03, rmse_f = 3.31e-01, lr = 2.65e-06
+[2025-04-18 08:32:16,675] DEEPMD INFO    batch    8800: val: rmse = 1.52e+00, rmse_e = 1.86e-02, rmse_f = 3.92e-01
+[2025-04-18 08:32:16,678] DEEPMD INFO    batch    8800: total wall time = 21.47 s, eta = 0:04:17
+[2025-04-18 08:32:37,599] DEEPMD INFO    batch    8900: trn: rmse = 1.69e+00, rmse_e = 3.91e-03, rmse_f = 4.48e-01, lr = 2.65e-06
+[2025-04-18 08:32:37,599] DEEPMD INFO    batch    8900: val: rmse = 1.22e+00, rmse_e = 2.63e-02, rmse_f = 2.95e-01
+[2025-04-18 08:32:37,602] DEEPMD INFO    batch    8900: total wall time = 20.92 s, eta = 0:03:50
+[2025-04-18 08:32:59,499] DEEPMD INFO    batch    9000: trn: rmse = 1.03e+00, rmse_e = 1.09e-02, rmse_f = 2.67e-01, lr = 2.65e-06
+[2025-04-18 08:32:59,499] DEEPMD INFO    batch    9000: val: rmse = 1.40e+00, rmse_e = 1.22e-02, rmse_f = 3.70e-01
+[2025-04-18 08:32:59,503] DEEPMD INFO    batch    9000: total wall time = 21.90 s, eta = 0:03:39
+[2025-04-18 08:33:20,942] DEEPMD INFO    batch    9100: trn: rmse = 1.21e+00, rmse_e = 1.55e-02, rmse_f = 3.09e-01, lr = 2.65e-06
+[2025-04-18 08:33:20,943] DEEPMD INFO    batch    9100: val: rmse = 1.70e+00, rmse_e = 2.48e-02, rmse_f = 4.47e-01
+[2025-04-18 08:33:20,945] DEEPMD INFO    batch    9100: total wall time = 21.44 s, eta = 0:03:12
+[2025-04-18 08:33:41,732] DEEPMD INFO    batch    9200: trn: rmse = 1.64e+00, rmse_e = 5.91e-02, rmse_f = 3.12e-01, lr = 2.65e-06
+[2025-04-18 08:33:41,732] DEEPMD INFO    batch    9200: val: rmse = 1.30e+00, rmse_e = 3.73e-03, rmse_f = 3.44e-01
+[2025-04-18 08:33:41,735] DEEPMD INFO    batch    9200: total wall time = 20.79 s, eta = 0:02:46
+[2025-04-18 08:34:03,784] DEEPMD INFO    batch    9300: trn: rmse = 1.50e+00, rmse_e = 1.55e-02, rmse_f = 3.94e-01, lr = 2.65e-06
+[2025-04-18 08:34:03,784] DEEPMD INFO    batch    9300: val: rmse = 9.76e-01, rmse_e = 7.02e-03, rmse_f = 2.56e-01
+[2025-04-18 08:34:03,786] DEEPMD INFO    batch    9300: total wall time = 22.05 s, eta = 0:02:34
+[2025-04-18 08:34:24,783] DEEPMD INFO    batch    9400: trn: rmse = 1.19e+00, rmse_e = 5.56e-03, rmse_f = 3.14e-01, lr = 2.65e-06
+[2025-04-18 08:34:24,783] DEEPMD INFO    batch    9400: val: rmse = 2.23e+00, rmse_e = 4.45e-02, rmse_f = 5.80e-01
+[2025-04-18 08:34:24,787] DEEPMD INFO    batch    9400: total wall time = 21.00 s, eta = 0:02:06
+[2025-04-18 08:34:47,188] DEEPMD INFO    batch    9500: trn: rmse = 1.19e+00, rmse_e = 5.49e-03, rmse_f = 3.14e-01, lr = 2.65e-06
+[2025-04-18 08:34:47,189] DEEPMD INFO    batch    9500: val: rmse = 1.34e+00, rmse_e = 3.47e-02, rmse_f = 3.07e-01
+[2025-04-18 08:34:47,191] DEEPMD INFO    batch    9500: total wall time = 22.40 s, eta = 0:01:52
+[2025-04-18 08:35:08,589] DEEPMD INFO    batch    9600: trn: rmse = 1.22e+00, rmse_e = 4.55e-02, rmse_f = 3.13e-01, lr = 2.65e-06
+[2025-04-18 08:35:08,590] DEEPMD INFO    batch    9600: val: rmse = 1.65e+00, rmse_e = 1.43e-02, rmse_f = 4.32e-01
+[2025-04-18 08:35:08,592] DEEPMD INFO    batch    9600: total wall time = 21.40 s, eta = 0:01:25
+[2025-04-18 08:35:30,407] DEEPMD INFO    batch    9700: trn: rmse = 1.31e+00, rmse_e = 1.91e-02, rmse_f = 3.32e-01, lr = 2.65e-06
+[2025-04-18 08:35:30,408] DEEPMD INFO    batch    9700: val: rmse = 1.19e+00, rmse_e = 2.30e-02, rmse_f = 2.92e-01
+[2025-04-18 08:35:30,410] DEEPMD INFO    batch    9700: total wall time = 21.82 s, eta = 0:01:05
+[2025-04-18 08:35:51,561] DEEPMD INFO    batch    9800: trn: rmse = 1.29e+00, rmse_e = 7.96e-03, rmse_f = 3.41e-01, lr = 2.65e-06
+[2025-04-18 08:35:51,562] DEEPMD INFO    batch    9800: val: rmse = 1.68e+00, rmse_e = 6.60e-03, rmse_f = 4.43e-01
+[2025-04-18 08:35:51,564] DEEPMD INFO    batch    9800: total wall time = 21.15 s, eta = 0:00:42
+[2025-04-18 08:36:13,347] DEEPMD INFO    batch    9900: trn: rmse = 1.38e+00, rmse_e = 2.12e-02, rmse_f = 3.48e-01, lr = 2.65e-06
+[2025-04-18 08:36:13,347] DEEPMD INFO    batch    9900: val: rmse = 1.72e+00, rmse_e = 1.61e-02, rmse_f = 4.55e-01
+[2025-04-18 08:36:13,350] DEEPMD INFO    batch    9900: total wall time = 21.79 s, eta = 0:00:21
+[2025-04-18 08:36:34,610] DEEPMD INFO    batch   10000: trn: rmse = 1.48e+00, rmse_e = 4.04e-02, rmse_f = 3.31e-01, lr = 2.65e-06
+[2025-04-18 08:36:34,611] DEEPMD INFO    batch   10000: val: rmse = 1.96e+00, rmse_e = 1.07e-02, rmse_f = 5.19e-01
+[2025-04-18 08:36:34,614] DEEPMD INFO    batch   10000: total wall time = 21.26 s, eta = 0:00:00
+[2025-04-18 08:36:34,837] DEEPMD INFO    Saved model to model.ckpt-10000.pd
+[2025-04-18 08:36:34,838] DEEPMD INFO    average training time: 0.2106 s/batch
+[2025-04-18 08:36:34,838] DEEPMD INFO    Trained model has been saved to: model.ckpt
