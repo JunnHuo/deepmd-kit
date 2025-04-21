@@ -603,10 +603,15 @@ class Trainer:
 
         if dist.is_available() and dist.is_initialized():
             # DDP will guarantee the model parameters are identical across all processes
-            self.wrapper = fleet.distributed_model(
-                self.wrapper,
-                # find_unused_parameters=True,
-            )
+            # self.wrapper = fleet.distributed_model(
+            #     self.wrapper,
+            #     # find_unused_parameters=True,
+            # )
+
+            # self.wrapper = dist.to_static(
+            #     self.wrapper,
+            #     # self.training_data._iterable,
+            # )
             self.optimizer = fleet.distributed_optimizer(self.optimizer)
 
         # Get model prob for multi-task
@@ -669,6 +674,13 @@ class Trainer:
             log.info(
                 "Enable CINN during training, there may be some additional "
                 "compilation time in the first traning step."
+            )
+
+        if dist.is_available() and dist.is_initialized():
+            # DDP will guarantee the model parameters are identical across all processes
+            self.wrapper = fleet.distributed_model(
+                self.wrapper,
+                # find_unused_parameters=True,
             )
 
         fout = (
@@ -1037,13 +1049,9 @@ class Trainer:
             )
 
     def save_model(self, save_path, lr=0.0, step=0) -> None:
-        module = (
-            self.wrapper.module
-            if dist.is_available() and dist.is_initialized()
-            else self.wrapper
-        )
-        module.train_infos["lr"] = float(lr)
-        module.train_infos["step"] = step
+        module = self.wrapper
+        # module.train_infos["lr"] = float(lr)
+        # module.train_infos["step"] = step
         paddle.save(
             {"model": module.state_dict(), "optimizer": self.optimizer.state_dict()},
             str(save_path),
